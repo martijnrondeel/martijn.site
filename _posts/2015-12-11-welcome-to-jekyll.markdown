@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Test post"
 date:   2015-12-11 16:46:07 -0500
 author: Martyn96
 ---

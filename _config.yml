@@ -1,16 +1,14 @@
 # Site settings
-title: Diki Andriansyah Blog - Stay Brom
-email: diki1aap@gmail.com
-description: "Ini sebuah blog room Diki Andriansyah yang saya kelola untuk membagikan tulisan dan aktivitas saya, seperti pengetahuan, pengamatan dan informasi di penulisan kode."
-baseurl: ""
-url: "https://dikiaap.github.io"
-subtitle: Brom brom code brom !!
-keywords: "Diki Andriansyah, Diki Andriansyah Blog, dikiaap, Diki Andriansyah Ananta Putra"
-sosial_username: dikiaap
+title: martyn.pw
+email: martijnie96@gmail.com
+description: "Personal website of Martijn Rondeel"
+url: "https://martyn.pw"
+keywords: "martijn rondeel, martyn.pw, personal blog, website, programming, experiments, web development"
+github_username: Martyn96
 simple_search: http://google.com/search
 # Build settings
 markdown: kramdown
-author: dikiaap
+author: Martyn96
 permalink: "write/:year/:month/:day/:title/"
 paginate: 5
 paginate_path: "/page/:num/"
