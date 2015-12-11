@@ -4,7 +4,6 @@ email: martijnie96@gmail.com
 description: "Personal website of Martijn Rondeel"
 url: "https://martyn.pw"
 keywords: "martijn rondeel, martyn.pw, personal blog, website, programming, experiments, web development"
-github_username: Martyn96
 simple_search: http://google.com/search
 # Build settings
 markdown: kramdown
