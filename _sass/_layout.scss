@@ -4,7 +4,6 @@
 .site-header {
     border-bottom: 1px solid #E5E5E5;
     position: relative;
-    background-color: #F5F5F5;
     text-align: center;
 }
 
@@ -216,6 +215,7 @@
  * All about of content
  */
 .page-content {
+  background-color: #F9F9F9;
     padding: $spacing-unit 0 0;
 }
 
@@ -381,7 +381,6 @@
 .site-footer {
     border-top: 1px solid #E6E6E6;
     padding: $spacing-unit 0;
-    background-color: #F9F9F9;
 }
 
 .footer-heading {
