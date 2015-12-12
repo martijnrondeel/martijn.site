@@ -9,7 +9,7 @@ simple_search: http://google.com/search
 markdown: kramdown
 author: Martyn96
 permalink: "blog/:title/"
-paginate: 5
+paginate: 4
 paginate_path: "/page/:num/"
 gems:
   - jekyll-paginate
