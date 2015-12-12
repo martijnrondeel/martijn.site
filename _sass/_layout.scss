@@ -76,51 +76,6 @@
 }
 
 /**
- *404 Style
- */
-.badface {
-  opactiy: 0;
-  animation: bad 3s;
-  animation-iteration-count: infinite;
-  position: relative;
-  width: 200px;
-}
-@keyframes bad {
-  0% {
-    opacity: 0;
-    transform: rotate(0deg);
-    width: 200px;
-    left: 0;
-    background-color: #66cccc;
-  }
-  16.66% {
-    background-color: #008080;
-  }
-  33.33% {
-    background-color: #40e0d0;
-  }
-  50% {
-    opacity: 1;
-    width: 400px;
-    left: 400px;
-    background-color: #ffb6c1;
-  }
-  66.66% {
-    background-color: turquoise;
-  }
-  83.33% {
-    background-color: #7fffd4;
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(360deg);
-    width: 200px;
-    left: 0;
-    background-color: #66cccc;
-  }
-}
-
-/**
  * Trigger for align center ~.~
  */
 .trigger {
@@ -156,11 +111,7 @@
     border-radius: 10px;
   }
   &.p0:hover ~ .c0,
-  &.p1:hover ~ .c1,
-  &.p2:hover ~ .c2,
-  &.p3:hover ~ .c3,
-  &.p4:hover ~ .c4,
-  &.p5:hover ~ .c5 {
+  &.p1:hover ~ .c1 {
     display: block;
   }
 }
