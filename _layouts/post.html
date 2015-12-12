@@ -6,7 +6,6 @@ layout: layout
   <div class="post-detail">
     {{ page.date | date: "%-d %b %Y" }}{% if page.author %} • Written by <a href="https://github.com/{{  site.author }}" target="_blank">{{ page.author }}</a>{% endif %}{% if page.meta %} {{ page.meta }}{% endif %}
   </div>
-  <div class="post-line"></div>
 </header>
 {{ content }}
 <hr>
@@ -15,6 +14,11 @@ layout: layout
     <a href="https://github.com/Martyn96" target="_blank">
       <span class="icon">
         <i class="fa fa-github-square"></i>
+      </span>
+    </a>
+    <a href="https://www.facebook.com/martijn.rondeel" target="_blank">
+      <span class="icon">
+        <i class="fa fa-facebook-square"></i>
       </span>
     </a>
     <a target="_top" href="mailto:{{ site.email }}">
