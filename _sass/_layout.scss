@@ -18,15 +18,6 @@
         display: none;
     }
 
-    .page-link {
-        color: #161616;
-        line-height: $base-line-height;
-        font-size: 20px;
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-        }
-    }
-
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
@@ -71,14 +62,6 @@
         &:hover .trigger {
             display: block;
             padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-            margin-left: 0;
-            margin-right: 0;
-            margin-bottom: 15px;
         }
     }
 }
