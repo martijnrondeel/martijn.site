@@ -13,3 +13,6 @@ paginate: 5
 paginate_path: "/page/:num/"
 gems:
   - jekyll-paginate
+# Minify compiled sass
+sass:
+  style: compressed
