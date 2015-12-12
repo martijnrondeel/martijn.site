@@ -1,6 +1,6 @@
 # Site settings
 title: martyn.pw
-email: martijnie96@gmail.com
+email: martijn.rondeel@windesheim.nl
 description: "Personal website of Martijn Rondeel"
 url: "https://martyn.pw"
 keywords: "martijn rondeel, martyn.pw, personal blog, website, programming, experiments, web development"
@@ -8,7 +8,7 @@ simple_search: http://google.com/search
 # Build settings
 markdown: kramdown
 author: Martyn96
-permalink: "write/:year/:month/:day/:title/"
+permalink: "blog/:title/"
 paginate: 5
 paginate_path: "/page/:num/"
 gems:
