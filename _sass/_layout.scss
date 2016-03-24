@@ -111,7 +111,8 @@
     border-radius: 10px;
   }
   &.p0:hover ~ .c0,
-  &.p1:hover ~ .c1 {
+  &.p1:hover ~ .c1,
+  &.p2:hover ~ .c2 {
     display: block;
   }
 }
