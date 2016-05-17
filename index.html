@@ -1,77 +1,52 @@
----
-layout: default
----
-<div class="home">
-  <div class="content-col-wrapper">
-    <div class="content-col">
-      <div class="dummy">
-        <i class="fa fa-male"></i> <b><span class="big">Hello!</span></b> I'm Martijn, a Dutch Computer Science student who writes code and makes other stuff (take a look at the projects below!)
-        <br>
-        <br>
-        <i class="fa fa-code"></i> <b><span class="big">Projects</span></b>
-        <br>
-        <div class="photos">
-          <a href="https://martyn.pw/projects/steam-profile-background/" class="p2 photo" target="_blank">
-            <img alt="Steam-Profile-Background" src="{{ site.baseurl }}/images/Project-Steam-Profile-Background.jpg">
-          </a>
-          <a href="https://github.com/Martyn96/SpeechBot" class="p1 photo" target="_blank">
-            <img alt="Speechbot" src="{{ site.baseurl }}/images/Project-Speechbot.jpg">
-          </a>
-          <a href="https://martyn.pw/projects/bytebeats/" class="p0 photo" target="_blank">
-            <img alt="Bytebeats" src="{{ site.baseurl }}/images/Project-Bytebeats.jpg">
-          </a>
-          <div class="caption c2">Get the background image from any Steam profile page</div>
-          <div class="caption c1">A Text-to-Speech Python Telegram bot</div>
-          <div class="caption c0">Generate 16-bit music using math</div>
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>martyn.me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Personal website of Martijn Rondeel">
+    <meta name="keywords" content="martijn rondeel, martyn.me, portfolio, programming, experiments, web development, game development">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <video id="backgroundvideo" autoplay loop muted>
+        <source src="video.webm" type="video/webm">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <div id="overlay"></div>
+    <div id="particles"></div>
+
+    <div class="container">
+        <div class="header">
+            <a href="#"><img src="assets/img/pic.jpg" class="round kaboom"></a>
         </div>
-        <br>
-        <div class="dummy blogpost">
-          <i class="fa fa-comment"></i> <b><span class="big">Blog</span></b>
+        <div class="block">
+            <h1>Hi</h1> I'm Martijn, a Dutch Computer Science student who writes code and makes other stuff (take a look at the projects below!)
         </div>
-      </div>
-      <ul class="post-list">{% for post in paginator.posts %}
-        <li class="titlepost">
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </li>
-        <li class="datepost">
-          <span class="post-meta">{{ post.date | date: "%-d %b %Y" }}</span>
-        </li>{% endfor %}
-      </ul>
+        <div class="block">
+            <h1>Projects</h1>
+            <div class="project">
+                <h3>Steam Profile Background</h3>Get the background image from any Steam profile page
+                <a href="https://martyn.pw/projects/steam-profile-background/"><span class="visit">Visit</span></a>
+            </div>
+            <div class="project">
+                <h3>SpeechBot</h3>A Text-to-Speech Python Telegram bot
+                <a href="https://github.com/Martyn96/SpeechBot"><span class="visit">GitHub</span></a>
+            </div>
+            <div class="project">
+                <h3>ByteBeats</h3>Generate 16-bit music using math
+                <a href="https://martyn.pw/projects/bytebeats/"><span class="visit">Visit</span></a>
+            </div>
+        </div>
     </div>
-  </div>{% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path }}">
-    <b><span class="big">Previous page</span></b>
-  </a>{% else %}{% endif %}{% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path }}">
-    <b><span class="big">Next page</span></b>
-  </a>{% else %}{% endif %}
-  <nav class="site-nav">
-    <div class="trigger">
-      <a href="https://github.com/Martyn96" target="_blank">
-        <span class="icon">
-          <i class="fa fa-github-square"></i>
-        </span>
-      </a>
-      <a href="https://www.linkedin.com/in/martijnrondeel" target="_blank">
-        <span class="icon">
-          <i class="fa fa-linkedin-square"></i>
-        </span>
-      </a>
-      <a href="https://www.facebook.com/martijn.rondeel" target="_blank">
-        <span class="icon">
-          <i class="fa fa-facebook-square"></i>
-        </span>
-      </a>
-      <a href="https://twitter.com/Martyn96_" target="_blank">
-        <span class="icon">
-          <i class="fa fa-twitter-square"></i>
-        </span>
-      </a>
-      <a target="_top" href="mailto:{{ site.email }}">
-        <span class="icon">
-          <i class="fa fa-envelope-square"></i>
-        </span>
-      </a>
-    </div>
-  </nav>
-</div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.0/p5.min.js"></script>
+    <script async type="text/javascript" src="assets/js/particlemadness.js"></script>
+    <script async type="text/javascript" src="assets/js/pixelyclick.js"></script>
+</body>
+
+
+</html>
