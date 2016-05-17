@@ -1,4 +1,4 @@
-// Customized "Anchor Click Canvas Animation" by Nick Sheffield
+// Customized version of Nick Sheffield's "Anchor Click Canvas Animation"
 // http://codepen.io/nicksheffield/pen/NNEoLg
 
 var anchors = document.querySelectorAll('.kaboom');
@@ -12,7 +12,6 @@ function explode(e) {
     var y = e.clientY;
     var c = document.createElement('canvas');
     var ctx = c.getContext('2d');
-    ctx.font = "10px Arial";
     var ratio = window.devicePixelRatio;
     var particles = [];
 
@@ -42,14 +41,12 @@ function explode(e) {
         };
     }
 
-    for (var i = 0; ++i < 25;) {
+    for (var i = 0; ++i < 10;) {
         particles.push(Particle());
     }
 
     function render() {
         ctx.clearRect(0, 0, c.width, c.height);
-
-        ctx.fillText("beep boop", 100, 80);
 
         particles.forEach(function(p, i) {
             angleTools.moveOnAngle(p, p.speed);
