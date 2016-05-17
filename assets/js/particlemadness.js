@@ -1,4 +1,5 @@
 var particles = [];
+var mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
 var Particle = function(position) {
     this.acceleration = createVector(0, 0.05);
@@ -8,7 +9,12 @@ var Particle = function(position) {
 
     Particle.prototype.run = function() {
         this.update();
-        this.display();
+
+        // Only show mouse input on desktop devices
+        if (!mobileDevice) {
+            this.display();
+        }
+
         this.intersects();
     };
 
