@@ -94,6 +94,8 @@ function draw() {
     }
 }
 
-$(window).click(function(e) {
-    particles.push(new Particle(createVector(e.pageX, e.pageY)));
-});
+if (!mobileDevice) {
+    $(window).click(function(e) {
+        particles.push(new Particle(createVector(e.pageX, e.pageY)));
+    });
+}
