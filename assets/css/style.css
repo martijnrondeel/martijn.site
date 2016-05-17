@@ -94,7 +94,7 @@ h3 {
 #overlay {
     opacity: 0.05;
     background-repeat: repeat;
-    background-image: url("https://d3k5xyayaartr5.cloudfront.net/_assets/pattern-overlays/patterns/black-vertical-stripes.png");
+    background-image: url("../img/black-vertical-stripes.png");
 }
 #backgroundvideo, #overlay, #particles {
     position: fixed;
