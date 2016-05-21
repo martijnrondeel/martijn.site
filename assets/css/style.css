@@ -13,7 +13,7 @@ html, body {
 }
 body {
     font-family: 'Parvas';
-    background-color: rgba(254, 254, 254, 1.0);
+    background-color: rgb(254, 254, 254);
 }
 h1, h3 {
     font-weight: 300;
@@ -33,7 +33,7 @@ h3 {
 .block {
     margin-top: 10px;
     padding: 1em;
-    background-color: rgba(255, 255, 255, 1.0);
+    background-color: rgb(255, 255, 255);
     border-radius: 6px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
@@ -54,7 +54,7 @@ h3 {
     border-radius: 4px;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.3);
 }
-.visit {
+.project a {
     padding-right: 4px;
     float: right;
 }
