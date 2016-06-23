@@ -36,6 +36,8 @@ var Particle = function(position) {
     };
 
     Particle.prototype.intersects = function() {
+		strokeWeight(0.2);
+		
         for (var i = 0; i < particles.length; i++) {
             var other = particles[i];
 
@@ -44,28 +46,22 @@ var Particle = function(position) {
 
                 if (dir.mag() < 12) {
                     dir.setMag(0.1);
-                    this.applyForce(dir);
+					this.acceleration.add(dir);
                 }
 
                 if (dir.mag() < 100) {
                     stroke(this.color[0], this.color[1], this.color[2]);
-                    strokeWeight(0.2);
                     line(this.position.x, this.position.y, other.position.x, other.position.y);
                 }
             }
         }
     };
 
-    Particle.prototype.applyForce = function(f) {
-        this.acceleration.add(f);
-    };
-
     Particle.prototype.display = function() {
         noStroke();
         fill(this.color[0], this.color[1], this.color[2]);
         ellipse(this.position.x, this.position.y, 2, 2);
-        var mPos = createVector(mouseX, mouseY);
-        var dir = p5.Vector.sub(this.position, mPos);
+        var dir = p5.Vector.sub(this.position, createVector(mouseX, mouseY));
 
         if (dir.mag() < 160) {
             stroke(this.color[0], this.color[1], this.color[2]);
@@ -87,10 +83,8 @@ function setup() {
 function draw() {
     clear();
 
-    var p;
     for (var i = 0; i < particles.length; i++) {
-        p = particles[i];
-        p.run();
+        particles[i].run();
     }
 }
 
