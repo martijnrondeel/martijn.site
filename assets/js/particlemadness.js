@@ -36,8 +36,6 @@ var Particle = function(position) {
     };
 
     Particle.prototype.intersects = function() {
-		strokeWeight(0.2);
-		
         for (var i = 0; i < particles.length; i++) {
             var other = particles[i];
 
@@ -46,10 +44,11 @@ var Particle = function(position) {
 
                 if (dir.mag() < 12) {
                     dir.setMag(0.1);
-					this.acceleration.add(dir);
+                    this.acceleration.add(dir);
                 }
 
                 if (dir.mag() < 100) {
+                    strokeWeight(0.2);
                     stroke(this.color[0], this.color[1], this.color[2]);
                     line(this.position.x, this.position.y, other.position.x, other.position.y);
                 }
