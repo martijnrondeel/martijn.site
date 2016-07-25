@@ -3,9 +3,11 @@
 
 var anchors = document.querySelectorAll('.kaboom');
 
-Array.prototype.forEach.call(anchors, function(anchor) {
-    anchor.addEventListener('click', explode);
-});
+if (!mobileDevice) {
+    Array.prototype.forEach.call(anchors, function(anchor) {
+        anchor.addEventListener('click', explode);
+    });
+}
 
 function explode(e) {
     var x = e.clientX;
@@ -21,10 +23,8 @@ function explode(e) {
     c.style.left = (x - 100) + 'px';
     c.style.top = (y - 100) + 'px';
     c.style.pointerEvents = 'none';
-    c.style.width = 200 + 'px';
-    c.style.height = c.style.width;
-    c.width = 200 * ratio;
-    c.height = c.width;
+    c.style.width = c.style.height = 200 + 'px';
+    c.width = c.height = 200 * ratio;
 
     function Particle() {
         return {
