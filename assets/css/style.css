@@ -5,23 +5,30 @@
     src: url('../fonts/Parvas.ttf') format('truetype');
     /* https://jupiter_hadley.itch.io/jupiters-font-bundle */
 }
+
 * {
     margin: 0;
 }
+
 html, body {
     height: 100%;
 }
+
 body {
-    font-family: 'Parvas';
+    font-family: 'Dosis', sans-serif;
     background-color: rgb(254, 254, 254);
 }
+
 h1, h3 {
+    font-family: 'Parvas';
     font-weight: 300;
 }
+
 h3 {
     font-size: 16px;
     text-shadow: .4px .4px rgba(0, 0, 0, 0.6);
 }
+
 
 /* Container system */
 
@@ -30,6 +37,7 @@ h3 {
     width: 34em;
     min-height: 100%;
 }
+
 .block {
     margin-top: 10px;
     padding: 1em;
@@ -37,15 +45,18 @@ h3 {
     border-radius: 6px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
+
 .header {
     padding-top: 40px;
     padding-bottom: 20px;
     text-align: center;
 }
+
 .header img {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
     border-radius: 25px;
 }
+
 .project {
     margin-top: 6px;
     padding: 6px;
@@ -54,13 +65,16 @@ h3 {
     border-radius: 4px;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.3);
 }
+
 .project a {
     padding-right: 4px;
     float: right;
 }
+
 .kaboom {
     cursor: pointer;
 }
+
 
 /* Social buttons */
 
@@ -70,32 +84,40 @@ h3 {
     padding: 1em;
     text-align: center;
 }
+
 #social i {
     padding: 3px;
 }
+
 .fa-twitter-square {
     color: rgb(0, 153, 214);
 }
+
 .fa-github-square {
     color: rgb(214, 37, 27);
 }
+
 .fa-linkedin-square {
     color: rgb(113, 14, 218);
 }
+
 .fa-envelope-square {
     color: rgb(0, 142, 5);
 }
+
 
 /* Particles & Vidya */
 
 #particles {
     opacity: 0.4;
 }
+
 #overlay {
     opacity: 0.05;
     background-repeat: repeat;
     background-image: url("../img/black-vertical-stripes.png");
 }
+
 #backgroundvideo, #overlay, #particles {
     position: fixed;
     min-width: 100%;
@@ -104,6 +126,7 @@ h3 {
     right: 0;
     z-index: -1;
 }
+
 
 /* Responsiveness */
 
