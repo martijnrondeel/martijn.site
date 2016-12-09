@@ -1,9 +1,9 @@
 /* HTML & Font */
 
 @font-face {
+    /* https://jupiter_hadley.itch.io/jupiters-font-bundle */
     font-family: 'Parvas';
     src: url('../fonts/Parvas.ttf') format('truetype');
-    /* https://jupiter_hadley.itch.io/jupiters-font-bundle */
 }
 
 * {
@@ -124,9 +124,4 @@ h3 {
     #backgroundvideo {
         display: none;
     }
-}
-
-
-}
-
 }
