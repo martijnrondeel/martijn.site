@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'icons';
+    src: url('../fonts/icons.eot?35166773');
+    src: url('../fonts/icons.eot?35166773#iefix') format('embedded-opentype'), url('../fonts/icons.woff2?35166773') format('woff2'), url('../fonts/icons.woff?35166773') format('woff'), url('../fonts/icons.ttf?35166773') format('truetype'), url('../fonts/icons.svg?35166773#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "icons";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter-squared:before {
+    content: '\f304';
+    color: rgb(0, 153, 214);
+}
+
+.icon-github-squared:before {
+    content: '\f300';
+    color: rgb(214, 37, 27);
+}
+
+.icon-linkedin-squared:before {
+    content: '\f30c';
+    color: rgb(113, 14, 218);
+}
+
+.icon-mail-squared:before {
+    content: '\f199';
+    color: rgb(0, 142, 5);
+}

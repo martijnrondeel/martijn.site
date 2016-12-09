@@ -87,22 +87,9 @@ h3 {
 
 #social i {
     padding: 3px;
-}
-
-.fa-twitter-square {
-    color: rgb(0, 153, 214);
-}
-
-.fa-github-square {
-    color: rgb(214, 37, 27);
-}
-
-.fa-linkedin-square {
-    color: rgb(113, 14, 218);
-}
-
-.fa-envelope-square {
-    color: rgb(0, 142, 5);
+    font-size: 1.33333333em;
+    line-height: .75em;
+    vertical-align: -15%;
 }
 
 
@@ -137,4 +124,9 @@ h3 {
     #backgroundvideo {
         display: none;
     }
+}
+
+
+}
+
 }
