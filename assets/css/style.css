@@ -88,7 +88,7 @@ h3 {
 }
 
 #social i {
-    font-size: 1.33333333em;
+    font-size: 1.5em;
     padding: .5em;
 }
 
@@ -100,7 +100,7 @@ h3 {
 }
 
 #overlay {
-    opacity: 0.05;
+    opacity: 0.03;
     background-repeat: repeat;
     background-image: url("../img/black-vertical-stripes.png");
 }
