@@ -39,6 +39,8 @@ h3 {
 }
 
 .block {
+    display: flex;
+    flex-direction: column;
     margin-top: 10px;
     padding: 1em;
     background-color: rgb(255, 255, 255);
@@ -62,7 +64,6 @@ h3 {
 .project {
     margin-top: 6px;
     padding: 6px;
-    overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.3);
@@ -81,17 +82,14 @@ h3 {
 /* Social buttons */
 
 #social {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    padding: 1em;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 2.8em;
 }
 
 #social i {
-    padding: 3px;
     font-size: 1.33333333em;
-    line-height: .75em;
-    vertical-align: -15%;
+    padding: .5em;
 }
 
 
