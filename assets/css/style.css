@@ -1,11 +1,5 @@
 /* HTML & Font */
 
-@font-face {
-    /* https://jupiter_hadley.itch.io/jupiters-font-bundle */
-    font-family: 'Parvas';
-    src: url('../fonts/Parvas.ttf') format('truetype');
-}
-
 * {
     margin: 0;
 }
@@ -20,7 +14,7 @@ body {
 }
 
 h1, h3 {
-    font-family: 'Parvas';
+    font-family: 'Roboto';
     font-weight: 300;
 }
 
