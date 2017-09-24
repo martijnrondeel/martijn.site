@@ -48,14 +48,14 @@ h3 {
     text-align: center;
 }
 
-.header img {
-    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
-    padding: 1px;
-    border-radius: 25px;
-    width: 50px;
-    height: 50px;
-}
+    .header img {
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+        padding: 1px;
+        border-radius: 25px;
+        width: 50px;
+        height: 50px;
+    }
 
 .project {
     margin-top: 6px;
@@ -65,10 +65,10 @@ h3 {
     box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.3);
 }
 
-.project a {
-    padding-right: 4px;
-    float: right;
-}
+    .project a {
+        padding-right: 4px;
+        float: right;
+    }
 
 .kaboom {
     cursor: pointer;
@@ -83,10 +83,10 @@ h3 {
     padding: 2.8em;
 }
 
-#social i {
-    font-size: 1.5em;
-    padding: .5em;
-}
+    #social i {
+        font-size: 1.5em;
+        padding: .5em;
+    }
 
 
 /* Particles & Vidya */
@@ -117,6 +117,7 @@ h3 {
     .container {
         width: 98%;
     }
+
     #backgroundvideo {
         display: none;
     }
