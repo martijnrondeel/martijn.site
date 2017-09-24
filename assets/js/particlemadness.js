@@ -39,7 +39,7 @@ var Particle = function(position) {
         for (var i = 0; i < particles.length; i++) {
             var other = particles[i];
 
-            if (other != this) {
+            if (other !== this) {
                 var dir = p5.Vector.sub(this.position, other.position);
 
                 if (dir.mag() < 12) {
