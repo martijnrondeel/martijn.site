@@ -1,4 +1,4 @@
-/* HTML & Font */
+/* Main */
 
 * {
     margin: 0;
@@ -10,115 +10,109 @@ html, body {
 
 body {
     font-family: 'Dosis', sans-serif;
-    background-color: rgb(254, 254, 254);
+    background: #191919;
+    color: #ffffff;
 }
 
-h1, h3 {
-    font-family: 'Roboto';
-    font-weight: 300;
+a:link {
+    color: #07b39b;
 }
 
-h3 {
-    font-size: 16px;
-    text-shadow: .4px .4px rgba(0, 0, 0, 0.6);
+a:visited {
+    color: #f79533;
 }
 
+a:hover {
+    color: #5073b8;
+}
+
+a:active {
+    color: #ef4e7b;
+}
 
 /* Container system */
 
 .container {
-    margin: 0 auto -30px;
-    width: 34em;
-    min-height: 100%;
-}
-
-.block {
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    padding: 1em;
-    background-color: rgb(255, 255, 255);
-    border-radius: 6px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
 }
 
-.header {
-    padding-top: 40px;
-    padding-bottom: 20px;
+.row {
+    width: auto;
+    margin: 0.1em;
+}
+
+.item {
+    margin: 3px 8px;
+}
+
+/* Content */
+
+#social .item {
     text-align: center;
+    background-color: #0e0e0e;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 2px solid #0e0e0e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition-duration: 0.4s;
+    transition-property: border-color;
 }
 
-    .header img {
-        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
-        padding: 1px;
-        border-radius: 25px;
-        width: 50px;
-        height: 50px;
+    #social .item:hover {
+        border-color: white;
     }
 
-.project {
-    margin-top: 6px;
-    padding: 6px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.3);
+#picture img {
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 2px;
+    border-radius: 75px;
+    width: 150px;
+    height: 150px;
 }
 
-    .project a {
-        padding-right: 4px;
-        float: right;
-    }
-
-.kaboom {
-    cursor: pointer;
+#biography {
+    max-width: 250px;
+    text-shadow: 1px 1px 0 #000000;
 }
 
+/* Effects */
 
-/* Social buttons */
-
-#social {
-    display: flex;
-    justify-content: space-around;
-    padding: 2.8em;
-}
-
-    #social i {
-        font-size: 1.5em;
-        padding: .5em;
-    }
-
-
-/* Particles & Vidya */
-
-#particles {
-    opacity: 0.4;
-}
-
-#overlay {
-    opacity: 0.03;
-    background-repeat: repeat;
-    background-image: url("../img/black-vertical-stripes.png");
-}
-
-#backgroundvideo, #overlay, #particles {
+#particles, #vignette {
     position: fixed;
     min-width: 100%;
     min-height: 100%;
     bottom: 0;
     right: 0;
-    z-index: -1;
+    z-index: -2;
 }
 
+#vignette {
+    box-shadow: 0 0 800px rgba(0,0,0,0.9) inset;
+    z-index: -1;
+}
 
 /* Responsiveness */
 
 @media only screen and (max-width: 600px) {
     .container {
         width: 98%;
+        flex-flow: column-reverse;
     }
 
-    #backgroundvideo {
-        display: none;
+    #picture {
+        order: 1;
+    }
+
+    #social {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #biography {
+        text-align: center;
     }
 }

@@ -3,18 +3,13 @@ var mobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Min
 
 var Particle = function(position) {
     this.acceleration = createVector(0, 0.05);
-    this.velocity = createVector(random(-0.5, 0.5), random(-0.5, 0.5));
+    this.velocity = createVector(random(-0.3, 0.3), random(-0.3, 0.3));
     this.position = position.copy();
     this.color = [random(0, 255), random(0, 255), random(0, 255)];
 
     Particle.prototype.run = function() {
         this.update();
-
-        // Only show mouse input on desktop devices
-        if (!mobileDevice) {
-            this.display();
-        }
-
+        this.display();
         this.intersects();
     };
 
@@ -24,15 +19,14 @@ var Particle = function(position) {
 
         this.acceleration.mult(-0.1);
 
-        if (this.position.x < 0) {
+        if (this.position.x < 0)
             this.position.x = width;
-        } else if (this.position.x > width) {
+        else if (this.position.x > width)
             this.position.x = 0;
-        } else if (this.position.y < 0) {
+        else if (this.position.y < 0)
             this.position.y = height;
-        } else if (this.position.y > height) {
+        else if (this.position.y > height)
             this.position.y = 0;
-        }
     };
 
     Particle.prototype.intersects = function() {
@@ -49,7 +43,7 @@ var Particle = function(position) {
 
                 if (dir.mag() < 100) {
                     strokeWeight(0.2);
-                    stroke(this.color[0], this.color[1], this.color[2]);
+                    stroke(this.color[0], this.color[1], this.color[2], 255 - dir.mag() * (255 / 100)); // Set opacity according to distance
                     line(this.position.x, this.position.y, other.position.x, other.position.y);
                 }
             }
@@ -60,6 +54,11 @@ var Particle = function(position) {
         noStroke();
         fill(this.color[0], this.color[1], this.color[2]);
         ellipse(this.position.x, this.position.y, 2, 2);
+
+        // Only allow mouse input on desktop
+        if (mobileDevice)
+            return;
+
         var dir = p5.Vector.sub(this.position, createVector(mouseX, mouseY));
 
         if (dir.mag() < 160) {
@@ -74,21 +73,20 @@ function setup() {
     var canvas = createCanvas(windowWidth, windowHeight);
     canvas.parent("particles");
 
-    for (var i = 0; i < width / 10; i++) {
+    for (var i = 0; i < width / 15; i++)
         particles.push(new Particle(createVector(random(width), random(height))));
+
+    // Don't allow spawning particles on mobile devices
+    if (!mobileDevice) {
+        window.onclick = function() {
+            particles.push(new Particle(createVector(mouseX, mouseY)));
+        };
     }
 }
 
 function draw() {
     clear();
 
-    for (var i = 0; i < particles.length; i++) {
+    for (var i = 0; i < particles.length; i++)
         particles[i].run();
-    }
-}
-
-if (!mobileDevice) {
-    $(window).click(function(e) {
-        particles.push(new Particle(createVector(e.pageX, e.pageY)));
-    });
 }

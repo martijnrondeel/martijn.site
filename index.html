@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <title>martyn.me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal website of Martijn Rondeel, a Web and Game Developer.">
+    <meta name="description" content="Personal website of Martijn Rondeel, a Software Engineer.">
     <meta name="keywords" content="martijn rondeel, martyn.me, portfolio, programming, web experiments, web development, game development, indie dev">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <!-- Ugh https://xkcd.com/927/ -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@martijnrondeel" />
@@ -17,14 +17,14 @@
     <meta name="twitter:url" content="https://martyn.me" />
     <meta property="og:title" content="martyn.me" />
     <meta name="twitter:title" content="martyn.me" />
-    <meta property="og:description" content="Personal website of Martijn Rondeel, a Web/Game Developer." />
-    <meta name="twitter:description" content="Personal website of Martijn Rondeel, a Web/Game Developer." />
+    <meta property="og:description" content="Personal website of Martijn Rondeel, a Software Engineer." />
+    <meta name="twitter:description" content="Personal website of Martijn Rondeel, a Software Engineer." />
     <meta property="og:image" content="https://martyn.me/assets/img/card.png" />
     <meta name="twitter:image" content="https://martyn.me/assets/img/card.png" />
     <script>
-        (function (i, s, o, g, r, a, m) {
+        (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
+            i[r] = i[r] || function() {
                 (i[r].q = i[r].q || []).push(arguments)
             }, i[r].l = 1 * new Date();
             a = s.createElement(o),
@@ -40,53 +40,26 @@
 </head>
 
 <body>
-    <video id="backgroundvideo" autoplay loop muted>
-        <source src="assets/video/video.webm" type="video/webm">
-        <source src="assets/video/video.mp4" type="video/mp4">
-    </video>
-    <div id="overlay"></div>
     <div id="particles"></div>
+    <div id="vignette"></div>
     <div class="container">
-        <div class="header">
-            <img src="assets/img/pic.png" class="round kaboom">
+        <div class="row" id="social">
+            <div class="item"><a href="https://twitter.com/martijnrondeel" target="_blank"><i class="icon icon-twitter"></i></a></div>
+            <div class="item"><a href="https://github.com/martijnrondeel" target="_blank"><i class="icon icon-github"></i></a></div>
+            <div class="item"><a href="https://www.linkedin.com/in/martijnrondeel" target="_blank"><i class="icon icon-linkedin"></i></a></div>
+            <div class="item"><a href="mailto:martijn.rondeel@windesheim.nl"><i class="icon icon-mail"></i></a></div>
         </div>
-        <div class="block">
-            <h1>Hi</h1> I'm Martijn Rondeel, a Dutch Computer Science student who writes code and makes other stuff (take a look at the projects below!)
+        <div class="row" id="picture">
+            <div class="item"><img src="assets/img/pic.png"></div>
         </div>
-        <div class="block">
-            <h1>Projects</h1>
-            <div class="project">
-                <h3>Mini Wheels</h3>A party game with tiny cars for 1-10 players (in development)
-                <a href="https://martyn.itch.io/mini-wheels" target="_blank">Play</a>
+        <div class="row">
+            <div class="item" id="biography">
+                I'm Martijn Rondeel, a Dutch 21 year old Software Engineering student working on various cool <a href="https://github.com/martijnrondeel" target="_blank">projects</a>.
             </div>
-            <div class="project">
-                <h3>Lusic</h3>Make music with lines
-                <a href="http://www.y8.com/games/lusic" target="_blank">Play</a>
-            </div>
-            <div class="project">
-                <h3>Steam Profile Background</h3>Get the background image from any Steam profile page
-                <a href="https://martyn.me/projects/steam-profile-background/" target="_blank">Visit</a>
-            </div>
-            <div class="project">
-                <h3>SpeechBot</h3>A Text-to-Speech Python Telegram bot
-                <a href="https://github.com/martijnrondeel/SpeechBot" target="_blank">GitHub</a>
-            </div>
-            <div class="project">
-                <h3>ByteBeats</h3>Generate 16-bit music using math
-                <a href="https://martyn.me/projects/bytebeats/" target="_blank">Visit</a>
-            </div>
-        </div>
-        <div id="social">
-            <a href="https://twitter.com/martijnrondeel" target="_blank"><i class="icon icon-twitter-squared"></i></a>
-            <a href="https://github.com/martijnrondeel" target="_blank"><i class="icon icon-github-squared"></i></a>
-            <a href="https://www.linkedin.com/in/martijnrondeel" target="_blank"><i class="icon icon-linkedin-squared"></i></a>
-            <a href="mailto:martijn.rondeel@windesheim.nl"><i class="icon icon-mail-squared"></i></a>
         </div>
     </div>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js"></script>
     <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.5/p5.min.js"></script>
-    <script async type="text/javascript" src="assets/js/particlemadness.js"></script>
-    <script async type="text/javascript" src="assets/js/pixelyclick.js"></script>
+    <script async type="text/javascript" src="assets/js/particles.js"></script>
 </body>
 
 </html>

@@ -10,6 +10,8 @@
     font-family: "icons";
     font-style: normal;
     font-weight: normal;
+    font-size: 1.6em;
+    padding: .2em;
     speak: none;
     display: inline-block;
     text-decoration: inherit;
@@ -20,22 +22,22 @@
     -webkit-font-smoothing: antialiased;
 }
 
-.icon-twitter-squared:before {
-    content: '\f304';
-    color: rgb(0, 153, 214);
+.icon-twitter:before {
+    content: '\f099';
+    color: #f79533;
 }
 
-.icon-github-squared:before {
-    content: '\f300';
-    color: rgb(214, 37, 27);
+.icon-github:before {
+    content: '\f09b';
+    color: #ef4e7b;
 }
 
-.icon-linkedin-squared:before {
-    content: '\f30c';
-    color: rgb(113, 14, 218);
+.icon-linkedin:before {
+    content: '\f0e1';
+    color: #5073b8;
 }
 
-.icon-mail-squared:before {
-    content: '\f199';
-    color: rgb(0, 142, 5);
+.icon-mail:before {
+    content: '\e800';
+    color: #07b39b;
 }
