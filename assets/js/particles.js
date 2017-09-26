@@ -43,7 +43,7 @@ var Particle = function(position) {
 
                 if (dir.mag() < 100) {
                     strokeWeight(0.2);
-                    stroke(this.color[0], this.color[1], this.color[2], 255 - dir.mag() * (255 / 100)); // Set opacity according to distance
+                    stroke(this.color[0], this.color[1], this.color[2], 255 - dir.mag() * (255 / 88)); // Set opacity according to distance
                     line(this.position.x, this.position.y, other.position.x, other.position.y);
                 }
             }
@@ -62,7 +62,7 @@ var Particle = function(position) {
         var dir = p5.Vector.sub(this.position, createVector(mouseX, mouseY));
 
         if (dir.mag() < 160) {
-            stroke(this.color[0], this.color[1], this.color[2]);
+            stroke(this.color[0], this.color[1], this.color[2], 150);
             strokeWeight(0.5);
             line(this.position.x, this.position.y, mouseX, mouseY);
         }
