@@ -48,9 +48,9 @@ a:active {
     margin: 3px 8px;
 }
 
-/* Content */
+/* Social icons */
 
-#social .item {
+#social > .item {
     text-align: center;
     background-color: #0e0e0e;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -60,10 +60,24 @@ a:active {
     transition-duration: 0.4s;
     transition-property: border-color;
 }
-
-    #social .item:hover {
-        border-color: white;
+    /* Twitter */
+    #social > .item:nth-of-type(1):hover {
+        border-color: #f79533;
     }
+    /* Github */
+    #social > .item:nth-of-type(2):hover {
+        border-color: #ef4e7b;
+    }
+    /* LinkedIn */
+    #social > .item:nth-of-type(3):hover {
+        border-color: #5073b8;
+    }
+    /* Mail */
+    #social > .item:nth-of-type(4):hover {
+        border-color: #07b39b;
+    }
+
+/* Content */
 
 #picture img {
     background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
