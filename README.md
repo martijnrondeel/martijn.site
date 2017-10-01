@@ -1,2 +1,2 @@
-# martyn.me
-[My personal website](https://martyn.me)
+# martijn.site
+[My personal website](https://martijn.site)
