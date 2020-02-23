@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "jsx": "react",
+    "lib": ["dom", "esnext"],
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": false,
+    "importHelpers": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "noUnusedLocals": false,
+    "strict": true,
+    "resolveJsonModule": true,
+    "incremental": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true
+  },
+  "exclude": ["node_modules", "public", ".cache"]
+}

@@ -1,0 +1,18 @@
+{
+  "eslint.packageManager": "yarn",
+  "editor.formatOnSave": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "javascript.referencesCodeLens.enabled": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "sasslint.packageManager": "yarn",
+  "typescript.surveys.enabled": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "javascript.referencesCodeLens.showOnAllFunctions": false,
+  "typescript.referencesCodeLens.showOnAllFunctions": false,
+  "typescript.tsserver.maxTsServerMemory": 4092,
+}
