@@ -1,6 +1,13 @@
 {
-  "endOfLine": "lf",
+  "htmlWhitespaceSensitivity": "ignore",
+  "jsxBracketSameLine": true,
+  "jsxSingleQuote": true,
+  "parser": "typescript",
+  "printWidth": 90,
+  "semi": true,
   "singleQuote": true,
-  "trailingComma": "es5",
-  "printWidth": 160
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "useTabs": false,
+  "endOfLine": "lf"
 }
