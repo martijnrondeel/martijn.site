@@ -21,7 +21,6 @@
   "keywords": [
     "gatsby",
     "graphql",
-    "netlify-cms",
     "pagination",
     "categories",
     "tags",
@@ -43,7 +42,6 @@
     "gatsby-plugin-feed": "^2.3.27",
     "gatsby-plugin-google-gtag": "^1.1.22",
     "gatsby-plugin-manifest": "^2.2.41",
-    "gatsby-plugin-netlify-cms": "^4.1.40",
     "gatsby-plugin-offline": "^3.0.35",
     "gatsby-plugin-optimize-svgs": "^1.0.4",
     "gatsby-plugin-react-helmet": "^3.1.22",
@@ -64,7 +62,6 @@
     "gatsby-transformer-sharp": "^2.3.14",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
-    "netlify-cms-app": "^2.11.23",
     "node-sass": "^4.13.1",
     "normalize-scss": "^7.0.1",
     "prismjs": "^1.19.0",
