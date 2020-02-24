@@ -15,24 +15,15 @@
     "test:coverage": "jest --coverage --config ./jest/jest.config.js",
     "test:watch": "jest --watch --config ./jest/jest.config.js"
   },
-  "repository": "https://github.com/alxshelepenok/gatsby-starter-lumen",
-  "author": "Alexander Shelepenok <alxshelepenok@gmail.com>",
+  "repository": "https://github.com/martijnrondeel/martijn.site",
+  "author": "Martijn Rondeel <martijn@rondeel.email>",
   "license": "MIT",
   "keywords": [
     "gatsby",
     "graphql",
-    "pagination",
-    "categories",
-    "tags",
-    "prismjs",
-    "static",
-    "lost",
     "blog",
     "minimal",
-    "react",
-    "theme",
-    "starter",
-    "disqus"
+    "react"
   ],
   "dependencies": {
     "classnames": "^2.2.6",
