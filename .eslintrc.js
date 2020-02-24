@@ -189,7 +189,7 @@ module.exports = {
     'react/jsx-indent-props': ['error', 2],
     'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
     'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
-    'react/no-danger': 'error',
+    'react/no-danger': 'warn',
     'react/self-closing-comp': 'error',
     'react/jsx-wrap-multilines': [
       'error',
@@ -276,5 +276,4 @@ module.exports = {
     ],
     'import/no-default-export': 'error',
   },
-  
 };

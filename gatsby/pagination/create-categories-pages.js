@@ -19,9 +19,9 @@ module.exports = async (graphql, actions) => {
     }
   `);
 
-  _.each(result.data.allMarkdownRemark.group, category => {
+  result.data.allMarkdownRemark.group.forEach(category => {
     const numPages = Math.ceil(category.totalCount / postsPerPage);
-    const categorySlug = `/category/${_.kebabCase(category.fieldValue)}`;
+    const categorySlug = `/category/${_.kebabCase(category.fieldValue)}`; // TODO: Get rid of lodash and move kebabcase to tools
 
     for (let i = 0; i < numPages; i += 1) {
       createPage({
