@@ -19,7 +19,7 @@ const Comments = ({ postTitle, postSlug }: Props) => {
       identifier={postTitle}
       shortname={disqusShortname}
       title={postTitle}
-      url={url + postSlug}
+      url={`${url}${postSlug}`}
     />
   );
 };
