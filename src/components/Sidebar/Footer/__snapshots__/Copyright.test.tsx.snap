@@ -4,6 +4,14 @@ exports[`Copyright renders correctly 1`] = `
 <div
   className="copyright"
 >
-  copyright
+  Source @
+   
+  <a
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    GitHub
+  </a>
+  <br />
 </div>
 `;

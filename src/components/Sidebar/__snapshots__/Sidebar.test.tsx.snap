@@ -218,6 +218,16 @@ exports[`Sidebar renders correctly 1`] = `
     <div
       className="copyright"
     >
+      Source @
+       
+      <a
+        href="github.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        GitHub
+      </a>
+      <br />
       Test copyright
     </div>
   </div>

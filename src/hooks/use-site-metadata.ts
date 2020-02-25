@@ -36,6 +36,7 @@ const useSiteMetadata = () => {
             title
             subtitle
             copyright
+            repo
             disqusShortname
           }
         }

@@ -1,14 +1,15 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Copyright from '.';
+import Footer from '.';
 
-describe('Copyright', () => {
+describe('Footer', () => {
   it('renders correctly', () => {
     const props = {
       copyright: 'copyright',
+      repo: 'github',
     };
 
-    const tree = renderer.create(<Copyright {...props} />).toJSON();
+    const tree = renderer.create(<Footer {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

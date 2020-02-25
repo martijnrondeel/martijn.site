@@ -1,6 +1,6 @@
 import React from 'react';
 import Contacts from './Contacts';
-import Copyright from './Copyright';
+import Footer from './Footer';
 import Menu from './Menu';
 import styles from './Sidebar.module.scss';
 import Author from './Author';
@@ -11,7 +11,7 @@ type Props = {
 };
 
 const Sidebar = ({ isIndex }: Props) => {
-  const { author, copyright, menu } = useSiteMetadata();
+  const { author, copyright, repo, menu } = useSiteMetadata();
 
   return (
     <div className={styles.sidebar}>
@@ -19,7 +19,7 @@ const Sidebar = ({ isIndex }: Props) => {
         <Author author={author} isIndex={isIndex} />
         <Menu menu={menu} />
         <Contacts contacts={author.contacts} />
-        <Copyright copyright={copyright} />
+        <Footer copyright={copyright} repo={repo} />
       </div>
     </div>
   );

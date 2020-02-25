@@ -1,9 +1,12 @@
+import { repository } from './package.json';
+
 export const siteConfig = {
   url: 'https://martijn.site',
   pathPrefix: '/',
   title: 'martijn.site',
   subtitle: 'Software engineer with passion for the web, creative coding & games.',
-  copyright: '© All rights reserved.',
+  copyright: '',
+  repo: repository,
   disqusShortname: '',
   postsPerPage: 4,
   googleAnalyticsId: 'UA-22014814-11',
