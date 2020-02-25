@@ -1,8 +1,8 @@
-const lost = require('lost');
-const pxtorem = require('postcss-pxtorem');
-const autoprefixer = require('autoprefixer');
+import lost from 'lost';
+import pxtorem from 'postcss-pxtorem';
+import autoprefixer from 'autoprefixer';
 
-module.exports = [
+export const postCssPlugins = [
   lost(),
   pxtorem({
     rootValue: 16,

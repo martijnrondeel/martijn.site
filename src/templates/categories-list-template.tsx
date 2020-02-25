@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import kebabCase from 'lodash/kebabCase';
 import Layout from '../components/Layout';
 import Page from '../components/Page';
 import Sidebar from '../components/Sidebar';
 import useSiteMetadata from '../hooks/use-site-metadata';
 import useCategoriesList from '../hooks/use-categories-list';
+import { kebabCase } from '../utils/kebabcase';
 
 const CategoriesListTemplate = () => {
   const { title, subtitle } = useSiteMetadata();

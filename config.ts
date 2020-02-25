@@ -1,4 +1,4 @@
-module.exports = {
+export const siteConfig = {
   url: 'https://martijn.site',
   pathPrefix: '/',
   title: 'martijn.site',

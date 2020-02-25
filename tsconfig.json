@@ -11,12 +11,15 @@
     "importHelpers": true,
     "removeComments": true,
     "sourceMap": true,
-    "noUnusedLocals": false,
+    "noUnusedLocals": true,
     "strict": true,
     "resolveJsonModule": true,
     "incremental": true,
     "strictNullChecks": true,
-    "alwaysStrict": true
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noEmit": true,
   },
   "exclude": ["node_modules", "public", ".cache"]
 }

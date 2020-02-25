@@ -1,10 +1,14 @@
-const path = require('path');
-const siteConfig = require('../../config.js');
+import { resolve } from 'path';
+import { GatsbyNode } from 'gatsby';
+import { siteConfig } from '../../config';
 
-module.exports = async (graphql, actions) => {
+export const createPostsPages: GatsbyNode['createPages'] = async ({
+  graphql,
+  actions,
+}) => {
   const { createPage } = actions;
 
-  const result = await graphql(`
+  const result = await graphql<any>(`
     {
       allMarkdownRemark(
         filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
@@ -14,13 +18,21 @@ module.exports = async (graphql, actions) => {
     }
   `);
 
+  if (result.errors) {
+    throw result.errors;
+  }
+
+  if (!result.data) {
+    throw new Error('ERROR: Could not fetch posts on build');
+  }
+
   const { postsPerPage } = siteConfig;
   const numPages = Math.ceil(result.data.allMarkdownRemark.totalCount / postsPerPage);
 
   for (let i = 0; i < numPages; i += 1) {
     createPage({
       path: i === 0 ? '/' : `/page/${i}`,
-      component: path.resolve('./src/templates/index-template.tsx'),
+      component: resolve('./src/templates/index-template.tsx'),
       context: {
         currentPage: i,
         postsLimit: postsPerPage,
