@@ -29,6 +29,7 @@
   ],
   "dependencies": {
     "classnames": "^2.2.6",
+    "date-fns": "^2.10.0",
     "gatsby": "^2.19.22",
     "gatsby-link": "^2.2.29",
     "gatsby-plugin-catch-links": "^2.1.26",
@@ -53,7 +54,6 @@
     "gatsby-source-filesystem": "^2.1.48",
     "gatsby-transformer-remark": "^2.6.53",
     "gatsby-transformer-sharp": "^2.3.14",
-    "moment": "^2.24.0",
     "normalize-scss": "^7.0.1",
     "prismjs": "^1.19.0",
     "react": "^16.12.0",
@@ -93,6 +93,7 @@
     "eslint-plugin-react": "7.18.3",
     "eslint-plugin-react-hooks": "^2.4.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.9.0",
+    "gatsby-plugin-webpack-size": "^1.0.0",
     "gh-pages": "2.2.0",
     "identity-obj-proxy": "3.0.0",
     "jest": "25.1.0",

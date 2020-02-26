@@ -1,5 +1,5 @@
 import React from 'react';
-import moment from 'moment';
+import { format } from 'date-fns';
 import { Link } from 'gatsby';
 import { Edges } from '../../types';
 import styles from './Feed.module.scss';
@@ -15,8 +15,8 @@ const Feed = ({ edges }: Props) => (
         <div className={styles['feed__item-meta']}>
           <time
             className={styles['feed__item-meta-time']}
-            dateTime={moment(edge.node.frontmatter.date).format('MMMM D, YYYY')}>
-            {moment(edge.node.frontmatter.date).format('MMMM YYYY')}
+            dateTime={format(new Date(edge.node.frontmatter.date), 'MMMM d, yyyy')}>
+            {format(new Date(edge.node.frontmatter.date), 'MMMM yyyy')}
           </time>
           <span className={styles['feed__item-meta-divider']} />
           <span className={styles['feed__item-meta-category']}>
