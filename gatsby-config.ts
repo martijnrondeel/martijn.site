@@ -44,62 +44,6 @@ export default {
       },
     },
     {
-      resolve: 'gatsby-plugin-feed',
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                site_url: url
-                title
-                description: subtitle
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }: any) =>
-              allMarkdownRemark.edges.map((edge: any) => ({
-                ...edge.node.frontmatter,
-                description: edge.node.frontmatter.description,
-                date: edge.node.frontmatter.date,
-                url: `${site.siteMetadata.site_url}${edge.node.fields.slug}`,
-                guid: `${site.siteMetadata.site_url}${edge.node.fields.slug}`,
-                custom_elements: [{ 'content:encoded': edge.node.html }],
-              })),
-            query: `
-              {
-                allMarkdownRemark(
-                  limit: 1000,
-                  sort: { order: DESC, fields: [frontmatter___date] },
-                  filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
-                ) {
-                  edges {
-                    node {
-                      html
-                      fields {
-                        slug
-                      }
-                      frontmatter {
-                        title
-                        date
-                        template
-                        draft
-                        description
-                      }
-                    }
-                  }
-                }
-              }
-            `,
-            output: '/rss.xml',
-            title: siteConfig.title,
-          },
-        ],
-      },
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -111,10 +55,6 @@ export default {
               withWebp: true,
               ignoreFileExtensions: [],
             },
-          },
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: { wrapperStyle: 'margin-bottom: 1.0725rem' },
           },
           'gatsby-remark-autolink-headers',
           'gatsby-remark-prismjs',
