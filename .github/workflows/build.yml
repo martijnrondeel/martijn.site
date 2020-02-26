@@ -28,12 +28,3 @@ jobs:
       run: yarn build
       env:
         CI: true
-
-    - name: Lint
-      run: yarn lint
-
-    - name: Unit & Snapshot tests
-      run: yarn test
-
-    - name: Coverage
-      run: yarn test:coverage
