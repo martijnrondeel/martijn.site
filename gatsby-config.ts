@@ -133,6 +133,5 @@ export default {
     },
     'gatsby-plugin-typescript',
     'gatsby-plugin-optimize-svgs',
-    'gatsby-plugin-webpack-size',
   ],
 };
