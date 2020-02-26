@@ -216,7 +216,7 @@ exports[`Sidebar renders correctly 1`] = `
       </ul>
     </div>
     <div
-      className="copyright"
+      className="footer"
     >
       Source @
        
