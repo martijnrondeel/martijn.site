@@ -5,6 +5,7 @@ module.exports = {
       title: 'Test title',
       subtitle: 'Test subtitle',
       copyright: 'Test copyright',
+      repo: 'github.com',
       disqusShortname: '',
       postsPerPage: 4,
       menu: [

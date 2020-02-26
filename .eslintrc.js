@@ -274,6 +274,6 @@ module.exports = {
         groups: [['external', 'builtin'], 'internal', ['parent', 'sibling', 'index']],
       },
     ],
-    'import/no-default-export': 'error',
+    'import/no-default-export': 'warn',
   },
 };

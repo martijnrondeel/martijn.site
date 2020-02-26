@@ -1,12 +1,17 @@
-const _ = require('lodash');
-const path = require('path');
-const siteConfig = require('../../config.js');
+import { resolve } from 'path';
+import { GatsbyNode } from 'gatsby';
+import { kebabCase } from '../../src/utils/kebabcase';
+import { siteConfig } from '../../config';
+import { AllMarkdownRemark } from '../../src/types';
 
-module.exports = async (graphql, actions) => {
+export const createTagsPages: GatsbyNode['createPages'] = async ({
+  graphql,
+  actions,
+}) => {
   const { createPage } = actions;
   const { postsPerPage } = siteConfig;
 
-  const result = await graphql(`
+  const result = await graphql<{ allMarkdownRemark: AllMarkdownRemark }>(`
     {
       allMarkdownRemark(
         filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
@@ -19,14 +24,22 @@ module.exports = async (graphql, actions) => {
     }
   `);
 
-  _.each(result.data.allMarkdownRemark.group, tag => {
+  if (result.errors) {
+    throw result.errors;
+  }
+
+  if (!result.data) {
+    throw new Error('ERROR: Could not fetch posts on build');
+  }
+
+  result.data.allMarkdownRemark.group.forEach(tag => {
     const numPages = Math.ceil(tag.totalCount / postsPerPage);
-    const tagSlug = `/tag/${_.kebabCase(tag.fieldValue)}`;
+    const tagSlug = `/tag/${kebabCase(tag.fieldValue)}`;
 
     for (let i = 0; i < numPages; i += 1) {
       createPage({
         path: i === 0 ? tagSlug : `${tagSlug}/page/${i}`,
-        component: path.resolve('./src/templates/tag-template.tsx'),
+        component: resolve('./src/templates/tag-template.tsx'),
         context: {
           tag: tag.fieldValue,
           currentPage: i,

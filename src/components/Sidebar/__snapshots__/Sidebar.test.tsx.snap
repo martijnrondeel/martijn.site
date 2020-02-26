@@ -16,9 +16,9 @@ exports[`Sidebar renders correctly 1`] = `
         <img
           alt="Test name"
           className="author__photo"
-          height="75"
+          height="120"
           src="/test.jpg"
-          width="75"
+          width="120"
         />
       </a>
       <h1
@@ -216,8 +216,18 @@ exports[`Sidebar renders correctly 1`] = `
       </ul>
     </div>
     <div
-      className="copyright"
+      className="footer"
     >
+      Source @
+       
+      <a
+        href="github.com"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        GitHub
+      </a>
+      <br />
       Test copyright
     </div>
   </div>

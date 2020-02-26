@@ -33,6 +33,8 @@ export type Node = {
     tags?: string[];
     title: string;
     socialImage?: string;
+    template?: string;
+    slug?: string;
   };
   html: string;
   id: string;
