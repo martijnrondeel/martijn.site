@@ -11,7 +11,7 @@ type Props = {
   isIndex?: boolean;
 };
 
-const Author = ({ author, isIndex }: Props) => (
+export const Author = ({ author, isIndex }: Props) => (
   <div className={styles.author}>
     <Link to='/'>
       <img
@@ -39,5 +39,3 @@ const Author = ({ author, isIndex }: Props) => (
     <p className={styles.author__subtitle}>{author.bio}</p>
   </div>
 );
-
-export default Author;

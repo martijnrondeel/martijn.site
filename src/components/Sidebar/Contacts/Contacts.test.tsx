@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Contacts from '.';
+import { Contacts } from '.';
 
 describe('Contacts', () => {
   const props = {

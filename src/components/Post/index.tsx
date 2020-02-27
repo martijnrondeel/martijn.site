@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Comments from './Comments';
-import Content from './Content';
-import Meta from './Meta';
-import Tags from './Tags';
+import { Comments } from './Comments';
+import { Content } from './Content';
+import { Meta } from './Meta';
+import { Tags } from './Tags';
 import styles from './Post.module.scss';
 import { Node } from '../../types';
-import Author from './Author';
+import { Author } from './Author';
 
 type Props = {
   post: Node;
 };
 
-const Post = ({ post }: Props) => {
+export const Post = ({ post }: Props) => {
   const { html } = post;
   const { tagSlugs, slug } = post.fields;
   const { tags, title, date } = post.frontmatter;
@@ -39,5 +39,3 @@ const Post = ({ post }: Props) => {
     </div>
   );
 };
-
-export default Post;

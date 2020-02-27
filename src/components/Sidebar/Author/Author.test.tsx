@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Author from '.';
+import { Author } from '.';
 
 describe('Author', () => {
   const props = {

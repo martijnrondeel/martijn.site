@@ -6,10 +6,8 @@ type Props = {
   date: string;
 };
 
-const Meta = ({ date }: Props) => (
+export const Meta = ({ date }: Props) => (
   <div className={styles.meta}>
     <p className={styles.meta__date}>Published {format(new Date(date), 'd MMM yyyy')}</p>
   </div>
 );
-
-export default Meta;

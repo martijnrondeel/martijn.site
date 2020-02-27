@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import Sidebar from '../components/Sidebar';
-import Page from '../components/Page';
+import { Layout } from '../components/Layout';
+import { Sidebar } from '../components/Sidebar';
+import { Page } from '../components/Page';
 import { MarkdownRemark } from '../types';
-import useSiteMetadata from '../hooks/use-site-metadata';
+import { useSiteMetadata } from '../hooks/use-site-metadata';
 
 type Props = {
   data: {

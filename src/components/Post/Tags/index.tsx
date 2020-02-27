@@ -7,7 +7,7 @@ type Props = {
   tagSlugs: string[];
 };
 
-const Tags = ({ tags, tagSlugs }: Props) => (
+export const Tags = ({ tags, tagSlugs }: Props) => (
   <div className={styles.tags}>
     <ul className={styles.tags__list}>
       {tagSlugs?.map((slug, i) => (
@@ -20,5 +20,3 @@ const Tags = ({ tags, tagSlugs }: Props) => (
     </ul>
   </div>
 );
-
-export default Tags;

@@ -8,7 +8,7 @@ type Props = {
   edges: Edges;
 };
 
-const Feed = ({ edges }: Props) => (
+export const Feed = ({ edges }: Props) => (
   <div className={styles.feed}>
     {edges.map(edge => (
       <div className={styles.feed__item} key={edge.node.fields.slug}>
@@ -42,5 +42,3 @@ const Feed = ({ edges }: Props) => (
     ))}
   </div>
 );
-
-export default Feed;

@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-const Page = ({ title, children }: Props) => {
+export const Page = ({ title, children }: Props) => {
   const pageRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -24,5 +24,3 @@ const Page = ({ title, children }: Props) => {
     </div>
   );
 };
-
-export default Page;
