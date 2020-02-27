@@ -7,8 +7,6 @@ import { RenderCallback } from '../../../types';
 
 describe('Comments', () => {
   beforeEach(() => {
-    console.log('hi');
-    console.log(siteMetadata);
     StaticQuery.mockImplementationOnce(
       ({ render }: RenderCallback) => render(siteMetadata),
       useStaticQuery.mockReturnValue(siteMetadata),

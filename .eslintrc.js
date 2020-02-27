@@ -80,7 +80,9 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 'error',
     '@typescript-eslint/require-await': 'warn',
     '@typescript-eslint/no-unused-vars-experimental': 'error',
-    '@typescript-eslint/no-extra-semi': ['error'],
+    '@typescript-eslint/no-extra-semi': 'error',
+    '@typescript-eslint/prefer-optional-chain': 'error',
+    '@typescript-eslint/prefer-nullish-coalescing': 'error',
 
     'prefer-template': 'error',
     'no-use-before-define': 'off',
