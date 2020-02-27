@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Feed from '.';
+import { Feed } from '.';
 
 describe('Feed', () => {
   const props = {

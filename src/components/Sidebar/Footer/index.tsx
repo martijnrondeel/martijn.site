@@ -6,7 +6,7 @@ type Props = {
   repo: string;
 };
 
-const Footer = ({ copyright, repo }: Props) => (
+export const Footer = ({ copyright, repo }: Props) => (
   <div className={styles.footer}>
     Source @{' '}
     <a href={repo} rel='noopener noreferrer' target='_blank'>
@@ -16,5 +16,3 @@ const Footer = ({ copyright, repo }: Props) => (
     {copyright}
   </div>
 );
-
-export default Footer;

@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Tags from '.';
+import { Tags } from '.';
 
 describe('Tags', () => {
   it('renders correctly', () => {

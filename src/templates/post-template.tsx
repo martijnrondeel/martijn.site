@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import Post from '../components/Post';
+import { Layout } from '../components/Layout';
+import { Post } from '../components/Post';
 import { MarkdownRemark } from '../types';
 import useSiteMetadata from '../hooks/use-site-metadata';
 

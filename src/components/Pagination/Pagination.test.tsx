@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Pagination from '.';
+import { Pagination } from '.';
 
 describe('Pagination', () => {
   const props = {

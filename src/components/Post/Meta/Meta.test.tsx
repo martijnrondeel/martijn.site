@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Meta from '.';
+import { Meta } from '.';
 
 describe('Meta', () => {
   it('renders correctly', () => {

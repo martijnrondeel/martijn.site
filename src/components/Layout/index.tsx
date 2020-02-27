@@ -11,7 +11,7 @@ type Props = {
   socialImage?: string;
 };
 
-const Layout = ({ children, title, description, socialImage }: Props) => {
+export const Layout = ({ children, title, description, socialImage }: Props) => {
   const { author, url } = useSiteMetadata();
   const metaImage = socialImage != null ? socialImage : author.photo;
   const metaImageUrl = `${url}${withPrefix(metaImage)}`;
@@ -33,5 +33,3 @@ const Layout = ({ children, title, description, socialImage }: Props) => {
     </div>
   );
 };
-
-export default Layout;

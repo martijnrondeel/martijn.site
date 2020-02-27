@@ -13,7 +13,12 @@ type Props = {
 
 const cx = classNames.bind(styles);
 
-const Pagination = ({ prevPagePath, nextPagePath, hasNextPage, hasPrevPage }: Props) => {
+export const Pagination = ({
+  prevPagePath,
+  nextPagePath,
+  hasNextPage,
+  hasPrevPage,
+}: Props) => {
   const prevClassName = cx({
     'pagination__prev-link': true,
     'pagination__prev-link--disable': !hasPrevPage,
@@ -39,5 +44,3 @@ const Pagination = ({ prevPagePath, nextPagePath, hasNextPage, hasPrevPage }: Pr
     </div>
   );
 };
-
-export default Pagination;

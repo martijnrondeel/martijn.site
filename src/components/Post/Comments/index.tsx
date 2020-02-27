@@ -7,7 +7,7 @@ type Props = {
   postSlug: string;
 };
 
-const Comments = ({ postTitle, postSlug }: Props) => {
+export const Comments = ({ postTitle, postSlug }: Props) => {
   const { url, disqusShortname } = useSiteMetadata();
 
   if (!disqusShortname) {
@@ -23,5 +23,3 @@ const Comments = ({ postTitle, postSlug }: Props) => {
     />
   );
 };
-
-export default Comments;

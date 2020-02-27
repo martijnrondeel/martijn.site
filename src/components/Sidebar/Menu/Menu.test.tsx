@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Menu from '.';
+import { Menu } from '.';
 
 describe('Menu', () => {
   const props = {

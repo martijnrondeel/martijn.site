@@ -1,7 +1,7 @@
 import React from 'react';
 import { getContactHref, getIcon } from '../../../utils';
 import styles from './Contacts.module.scss';
-import Icon from '../../Icon';
+import { Icon } from '../../Icon';
 
 type Props = {
   contacts: {
@@ -9,7 +9,7 @@ type Props = {
   };
 };
 
-const Contacts = ({ contacts }: Props) => (
+export const Contacts = ({ contacts }: Props) => (
   <div className={styles.contacts}>
     <ul className={styles.contacts__list}>
       {Object.keys(contacts).map(name =>
@@ -28,5 +28,3 @@ const Contacts = ({ contacts }: Props) => (
     </ul>
   </div>
 );
-
-export default Contacts;

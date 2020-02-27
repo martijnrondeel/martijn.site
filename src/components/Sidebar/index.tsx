@@ -1,16 +1,16 @@
 import React from 'react';
-import Contacts from './Contacts';
-import Footer from './Footer';
-import Menu from './Menu';
+import { Contacts } from './Contacts';
+import { Footer } from './Footer';
+import { Menu } from './Menu';
 import styles from './Sidebar.module.scss';
-import Author from './Author';
+import { Author } from './Author';
 import useSiteMetadata from '../../hooks/use-site-metadata';
 
 type Props = {
   isIndex?: boolean;
 };
 
-const Sidebar = ({ isIndex }: Props) => {
+export const Sidebar = ({ isIndex }: Props) => {
   const { author, copyright, repo, menu } = useSiteMetadata();
 
   return (
@@ -24,5 +24,3 @@ const Sidebar = ({ isIndex }: Props) => {
     </div>
   );
 };
-
-export default Sidebar;

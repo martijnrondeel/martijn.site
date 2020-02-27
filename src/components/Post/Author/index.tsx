@@ -3,7 +3,7 @@ import { getContactHref } from '../../../utils';
 import styles from './Author.module.scss';
 import useSiteMetadata from '../../../hooks/use-site-metadata';
 
-const Author = () => {
+export const Author = () => {
   const { author } = useSiteMetadata();
 
   return (
@@ -21,5 +21,3 @@ const Author = () => {
     </div>
   );
 };
-
-export default Author;

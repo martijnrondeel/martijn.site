@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Content from '.';
+import { Content } from '.';
 
 describe('Content', () => {
   it('renders correctly', () => {

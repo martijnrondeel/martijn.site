@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { useStaticQuery, StaticQuery } from 'gatsby';
-import Author from '.';
+import { Author } from '.';
 import siteMetadata from '../../../../jest/__fixtures__/site-metadata';
 import { RenderCallback } from '../../../types';
 
