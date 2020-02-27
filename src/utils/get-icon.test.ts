@@ -17,4 +17,5 @@ test('getIcon', () => {
   expect(getIcon('codepen')).toEqual(ICONS.CODEPEN);
   expect(getIcon('youtube')).toEqual(ICONS.YOUTUBE);
   expect(getIcon('soundcloud')).toEqual(ICONS.SOUNDCLOUD);
+  expect(getIcon('non-existent')).toEqual(ICONS.MISSING);
 });
