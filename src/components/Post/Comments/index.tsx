@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDisqusComments from 'react-disqus-comments';
-import useSiteMetadata from '../../../hooks/use-site-metadata';
+import { useSiteMetadata } from '../../../hooks/use-site-metadata';
 
 type Props = {
   postTitle: string;

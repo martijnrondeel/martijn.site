@@ -2,7 +2,7 @@ import React from 'react';
 import { Sidebar } from '../components/Sidebar';
 import { Layout } from '../components/Layout';
 import { Page } from '../components/Page';
-import useSiteMetadata from '../hooks/use-site-metadata';
+import { useSiteMetadata } from '../hooks/use-site-metadata';
 
 const NotFoundTemplate = () => {
   const { title, subtitle } = useSiteMetadata();

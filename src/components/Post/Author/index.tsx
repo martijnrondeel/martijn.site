@@ -1,7 +1,7 @@
 import React from 'react';
 import { getContactHref } from '../../../utils';
 import styles from './Author.module.scss';
-import useSiteMetadata from '../../../hooks/use-site-metadata';
+import { useSiteMetadata } from '../../../hooks/use-site-metadata';
 
 export const Author = () => {
   const { author } = useSiteMetadata();

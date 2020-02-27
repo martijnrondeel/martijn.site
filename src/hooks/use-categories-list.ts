@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
 
-const useCategoriesList = () => {
+export const useCategoriesList = () => {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query CategoriesListQuery {
@@ -18,5 +18,3 @@ const useCategoriesList = () => {
 
   return allMarkdownRemark.group;
 };
-
-export default useCategoriesList;

@@ -4,7 +4,7 @@ import { Footer } from './Footer';
 import { Menu } from './Menu';
 import styles from './Sidebar.module.scss';
 import { Author } from './Author';
-import useSiteMetadata from '../../hooks/use-site-metadata';
+import { useSiteMetadata } from '../../hooks/use-site-metadata';
 
 type Props = {
   isIndex?: boolean;

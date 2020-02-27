@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import Helmet from 'react-helmet';
 import { withPrefix } from 'gatsby';
 import styles from './Layout.module.scss';
-import useSiteMetadata from '../../hooks/use-site-metadata';
+import { useSiteMetadata } from '../../hooks/use-site-metadata';
 
 type Props = {
   children: ReactNode;

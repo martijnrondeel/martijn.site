@@ -3,8 +3,8 @@ import { Link } from 'gatsby';
 import { Layout } from '../components/Layout';
 import { Sidebar } from '../components/Sidebar';
 import { Page } from '../components/Page';
-import useSiteMetadata from '../hooks/use-site-metadata';
-import useTagsList from '../hooks/use-tags-list';
+import { useSiteMetadata } from '../hooks/use-site-metadata';
+import { useTagsList } from '../hooks/use-tags-list';
 import { kebabCase } from '../utils/kebabcase';
 
 const TagsListTemplate = () => {
