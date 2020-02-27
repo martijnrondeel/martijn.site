@@ -31,6 +31,8 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:you-dont-need-lodash-underscore/compatible',
     'plugin:array-func/all',
+    'plugin:jest/recommended',
+    'plugin:jsx-a11y/recommended',
   ],
   plugins: [
     'react',
@@ -40,6 +42,8 @@ module.exports = {
     'you-dont-need-lodash-underscore',
     'prefer-object-spread',
     'import',
+    'jest',
+    'jsx-a11y',
   ],
   rules: {
     '@typescript-eslint/adjacent-overload-signatures': 'error',
