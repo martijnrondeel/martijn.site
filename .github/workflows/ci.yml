@@ -40,6 +40,7 @@ jobs:
     - name: Compile  
       run: yarn build
       env:
+        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         CI: true
 
   test:
