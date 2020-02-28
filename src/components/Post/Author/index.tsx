@@ -1,5 +1,5 @@
 import React from 'react';
-import { getContactHref } from '../../../utils';
+import { getContactHref } from '../../../utils/get-contact-href';
 import styles from './Author.module.scss';
 import { useSiteMetadata } from '../../../hooks/use-site-metadata';
 

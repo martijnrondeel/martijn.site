@@ -50,7 +50,7 @@ export const getIcon = (name: string) => {
       icon = ICONS.SOUNDCLOUD;
       break;
     default:
-      icon = {};
+      icon = ICONS.MISSING;
       break;
   }
 

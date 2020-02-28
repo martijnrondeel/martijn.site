@@ -10,7 +10,6 @@
     "declaration": false,
     "importHelpers": true,
     "removeComments": true,
-    "sourceMap": true,
     "noUnusedLocals": true,
     "strict": true,
     "resolveJsonModule": true,
@@ -20,6 +19,7 @@
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noEmit": true,
+    "allowJs": true,
   },
   "exclude": ["node_modules", "public", ".cache"]
 }

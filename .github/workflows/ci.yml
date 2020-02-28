@@ -1,6 +1,6 @@
 name: CI
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -40,7 +40,15 @@ jobs:
     - name: Compile  
       run: yarn build
       env:
+        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         CI: true
+
+    - name: Percy visual test
+      uses: percy/snapshot-action@v0.1.1
+      with:
+        build-directory: "public"
+      env:
+        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
   test:
     name: Test

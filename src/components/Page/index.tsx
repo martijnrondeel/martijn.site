@@ -7,11 +7,11 @@ type Props = {
 };
 
 export const Page = ({ title, children }: Props) => {
-  const pageRef = useRef<HTMLInputElement>(null);
+  const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (pageRef?.current) {
-      pageRef.current.scrollIntoView();
+      pageRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 
