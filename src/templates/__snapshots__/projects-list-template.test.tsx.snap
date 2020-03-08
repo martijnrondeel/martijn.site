@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CategoryTemplate renders correctly 1`] = `
+exports[`ProjectsListTemplate renders correctly 1`] = `
 <div
   className="layout"
 >
@@ -24,7 +24,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
             width="120"
           />
         </a>
-        <h2
+        <h1
           className="author__title"
         >
           <a
@@ -33,7 +33,7 @@ exports[`CategoryTemplate renders correctly 1`] = `
           >
             Test name
           </a>
-        </h2>
+        </h1>
         <p
           className="author__subtitle"
         >
@@ -439,11 +439,6 @@ exports[`CategoryTemplate renders correctly 1`] = `
     <div
       className="page__inner"
     >
-      <h1
-        className="page__title"
-      >
-        test
-      </h1>
       <div
         className="page__body"
       >
@@ -465,16 +460,6 @@ exports[`CategoryTemplate renders correctly 1`] = `
               <span
                 className="feed__item-meta-divider"
               />
-              <span
-                className="feed__item-meta-category"
-              >
-                <a
-                  className="feed__item-meta-category-link"
-                  href="/test"
-                >
-                  test
-                </a>
-              </span>
             </div>
             <h2
               className="feed__item-title"
@@ -513,16 +498,6 @@ exports[`CategoryTemplate renders correctly 1`] = `
               <span
                 className="feed__item-meta-divider"
               />
-              <span
-                className="feed__item-meta-category"
-              >
-                <a
-                  className="feed__item-meta-category-link"
-                  href="/test"
-                >
-                  test
-                </a>
-              </span>
             </div>
             <h2
               className="feed__item-title"

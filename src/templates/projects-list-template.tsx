@@ -13,28 +13,25 @@ type Props = {
   pageContext: PageContext;
 };
 
-const CategoryTemplate = ({ data, pageContext }: Props) => {
+const ProjectsListTemplate = ({ data, pageContext }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
 
   const {
-    category,
     currentPage,
+    hasNextPage,
+    hasPrevPage,
     prevPagePath,
     nextPagePath,
-    hasPrevPage,
-    hasNextPage,
   } = pageContext;
 
   const { edges } = data.allMarkdownRemark;
   const pageTitle =
-    currentPage > 0
-      ? `${category} - Page ${currentPage} - ${siteTitle}`
-      : `${category} - ${siteTitle}`;
+    currentPage > 0 ? `Projects - Page ${currentPage} - ${siteTitle}` : siteTitle;
 
   return (
     <Layout description={siteSubtitle} title={pageTitle}>
-      <Sidebar />
-      <Page title={category}>
+      <Sidebar isIndex />
+      <Page>
         <Feed edges={edges} />
         <Pagination
           hasNextPage={hasNextPage}
@@ -48,30 +45,22 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
 };
 
 export const query = graphql`
-  query CategoryPage($category: String, $postsLimit: Int!, $postsOffset: Int!) {
+  query ProjectsListTemplate($postsLimit: Int!, $postsOffset: Int!) {
     allMarkdownRemark(
       limit: $postsLimit
       skip: $postsOffset
-      filter: {
-        frontmatter: {
-          category: { eq: $category }
-          template: { eq: "post" }
-          draft: { ne: true }
-        }
-      }
+      filter: { frontmatter: { template: { eq: "project" }, draft: { ne: true } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
         node {
           fields {
-            categorySlug
             slug
           }
           frontmatter {
+            title
             date
             description
-            category
-            title
           }
         }
       }
@@ -79,4 +68,4 @@ export const query = graphql`
   }
 `;
 
-export default CategoryTemplate;
+export default ProjectsListTemplate;

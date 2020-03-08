@@ -13,16 +13,16 @@ export const siteConfig = {
   useKatex: false,
   menu: [
     {
-      label: 'Articles',
-      path: '/',
+      label: 'Blog',
+      path: '/blog',
+    },
+    {
+      label: 'Projects',
+      path: '/projects',
     },
     {
       label: 'About me',
       path: '/pages/about',
-    },
-    {
-      label: 'Contact me',
-      path: '/pages/contacts',
     },
   ],
   author: {

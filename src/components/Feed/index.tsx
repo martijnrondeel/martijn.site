@@ -19,13 +19,6 @@ export const Feed = ({ edges }: Props) => (
             {format(new Date(edge.node.frontmatter.date), 'MMMM yyyy')}
           </time>
           <span className={styles['feed__item-meta-divider']} />
-          <span className={styles['feed__item-meta-category']}>
-            <Link
-              className={styles['feed__item-meta-category-link']}
-              to={edge.node.fields.categorySlug}>
-              {edge.node.frontmatter.category}
-            </Link>
-          </span>
         </div>
         <h2 className={styles['feed__item-title']}>
           <Link className={styles['feed__item-title-link']} to={edge.node.fields.slug}>

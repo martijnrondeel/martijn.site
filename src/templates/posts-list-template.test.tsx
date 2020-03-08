@@ -1,26 +1,29 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { StaticQuery, useStaticQuery } from 'gatsby';
-import CategoriesListTemplate from './categories-list-template';
+import PostsListTemplate from './posts-list-template';
 import siteMetadata from '../../jest/__fixtures__/site-metadata';
 import allMarkdownRemark from '../../jest/__fixtures__/all-markdown-remark';
+import pageContext from '../../jest/__fixtures__/page-context';
 import { RenderCallback } from '../types';
 
-describe('CategoriesListTemplate', () => {
+describe('PostsListTemplate', () => {
   const props = {
-    ...siteMetadata,
-    ...allMarkdownRemark,
+    data: {
+      ...allMarkdownRemark,
+    },
+    ...pageContext,
   };
 
   beforeEach(() => {
     StaticQuery.mockImplementationOnce(
-      ({ render }: RenderCallback) => render(props),
-      useStaticQuery.mockReturnValue(props),
+      ({ render }: RenderCallback) => render(siteMetadata),
+      useStaticQuery.mockReturnValue(siteMetadata),
     );
   });
 
   it('renders correctly', () => {
-    const tree = renderer.create(<CategoriesListTemplate />).toJSON();
+    const tree = renderer.create(<PostsListTemplate {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

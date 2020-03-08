@@ -5,7 +5,7 @@ import { Sidebar } from '../components/Sidebar';
 import { Feed } from '../components/Feed';
 import { Page } from '../components/Page';
 import { Pagination } from '../components/Pagination';
-import { AllMarkdownRemark, PageContext } from '../types';
+import { PageContext, AllMarkdownRemark } from '../types';
 import { useSiteMetadata } from '../hooks/use-site-metadata';
 
 type Props = {
@@ -13,28 +13,25 @@ type Props = {
   pageContext: PageContext;
 };
 
-const TagTemplate = ({ data, pageContext }: Props) => {
+const PostsListTemplate = ({ data, pageContext }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
 
   const {
-    tag,
     currentPage,
+    hasNextPage,
+    hasPrevPage,
     prevPagePath,
     nextPagePath,
-    hasPrevPage,
-    hasNextPage,
   } = pageContext;
 
   const { edges } = data.allMarkdownRemark;
   const pageTitle =
-    currentPage > 0
-      ? `All Posts tagged as "${tag}" - Page ${currentPage} - ${siteTitle}`
-      : `All Posts tagged as "${tag}" - ${siteTitle}`;
+    currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
 
   return (
     <Layout description={siteSubtitle} title={pageTitle}>
-      <Sidebar />
-      <Page title={tag}>
+      <Sidebar isIndex />
+      <Page>
         <Feed edges={edges} />
         <Pagination
           hasNextPage={hasNextPage}
@@ -48,35 +45,21 @@ const TagTemplate = ({ data, pageContext }: Props) => {
 };
 
 export const query = graphql`
-  query TagPage($tag: String, $postsLimit: Int!, $postsOffset: Int!) {
-    site {
-      siteMetadata {
-        title
-        subtitle
-      }
-    }
+  query PostsListTemplate($postsLimit: Int!, $postsOffset: Int!) {
     allMarkdownRemark(
       limit: $postsLimit
       skip: $postsOffset
-      filter: {
-        frontmatter: {
-          tags: { in: [$tag] }
-          template: { eq: "post" }
-          draft: { ne: true }
-        }
-      }
+      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
         node {
           fields {
             slug
-            categorySlug
           }
           frontmatter {
             title
             date
-            category
             description
           }
         }
@@ -85,4 +68,4 @@ export const query = graphql`
   }
 `;
 
-export default TagTemplate;
+export default PostsListTemplate;

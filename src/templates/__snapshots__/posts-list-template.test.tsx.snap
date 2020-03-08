@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CategoriesListTemplate renders correctly 1`] = `
+exports[`PostsListTemplate renders correctly 1`] = `
 <div
   className="layout"
 >
@@ -24,7 +24,7 @@ exports[`CategoriesListTemplate renders correctly 1`] = `
             width="120"
           />
         </a>
-        <h2
+        <h1
           className="author__title"
         >
           <a
@@ -33,7 +33,7 @@ exports[`CategoriesListTemplate renders correctly 1`] = `
           >
             Test name
           </a>
-        </h2>
+        </h1>
         <p
           className="author__subtitle"
         >
@@ -439,36 +439,115 @@ exports[`CategoriesListTemplate renders correctly 1`] = `
     <div
       className="page__inner"
     >
-      <h1
-        className="page__title"
-      >
-        Categories
-      </h1>
       <div
         className="page__body"
       >
-        <ul>
-          <li>
-            <a
-              href="/category/test-0/"
+        <div
+          className="feed"
+        >
+          <div
+            className="feed__item"
+          >
+            <div
+              className="feed__item-meta"
+            >
+              <time
+                className="feed__item-meta-time"
+                dateTime="September 1, 2016"
+              >
+                September 2016
+              </time>
+              <span
+                className="feed__item-meta-divider"
+              />
+            </div>
+            <h2
+              className="feed__item-title"
+            >
+              <a
+                className="feed__item-title-link"
+                href="/test_0"
+              >
+                test_0
+              </a>
+            </h2>
+            <p
+              className="feed__item-description"
             >
               test_0
-               (
-              1
-              )
-            </a>
-          </li>
-          <li>
+            </p>
             <a
-              href="/category/test-1/"
+              className="feed__item-readmore"
+              href="/test_0"
+            >
+              Read
+            </a>
+          </div>
+          <div
+            className="feed__item"
+          >
+            <div
+              className="feed__item-meta"
+            >
+              <time
+                className="feed__item-meta-time"
+                dateTime="September 1, 2016"
+              >
+                September 2016
+              </time>
+              <span
+                className="feed__item-meta-divider"
+              />
+            </div>
+            <h2
+              className="feed__item-title"
+            >
+              <a
+                className="feed__item-title-link"
+                href="/test_1"
+              >
+                test_1
+              </a>
+            </h2>
+            <p
+              className="feed__item-description"
             >
               test_1
-               (
-              2
-              )
+            </p>
+            <a
+              className="feed__item-readmore"
+              href="/test_1"
+            >
+              Read
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
+        <div
+          className="pagination"
+        >
+          <div
+            className="pagination__prev"
+          >
+            <a
+              className="pagination__prev-link"
+              href="/page/1"
+              rel="prev"
+            >
+              ← PREV
+            </a>
+          </div>
+          <div
+            className="pagination__next"
+          >
+            <a
+              className="pagination__next-link"
+              href="/page/3"
+              rel="next"
+            >
+              → NEXT
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
