@@ -31,16 +31,26 @@ export const Pagination = ({
 
   return (
     <div className={styles.pagination}>
-      <div className={styles.pagination__prev}>
-        <Link className={prevClassName} rel='prev' to={hasPrevPage ? prevPagePath : '/'}>
-          {PAGINATION.PREV_PAGE}
-        </Link>
-      </div>
-      <div className={styles.pagination__next}>
-        <Link className={nextClassName} rel='next' to={hasNextPage ? nextPagePath : '/'}>
-          {PAGINATION.NEXT_PAGE}
-        </Link>
-      </div>
+      {hasPrevPage || hasNextPage ? ( // Only show prev and next buttons if there are multiple pages
+        <>
+          <div className={styles.pagination__prev}>
+            <Link
+              className={prevClassName}
+              rel='prev'
+              to={hasPrevPage ? prevPagePath : '/'}>
+              {PAGINATION.PREV_PAGE}
+            </Link>
+          </div>
+          <div className={styles.pagination__next}>
+            <Link
+              className={nextClassName}
+              rel='next'
+              to={hasNextPage ? nextPagePath : '/'}>
+              {PAGINATION.NEXT_PAGE}
+            </Link>
+          </div>
+        </>
+      ) : null}
     </div>
   );
 };
