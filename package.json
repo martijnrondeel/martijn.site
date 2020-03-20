@@ -58,9 +58,9 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/preset-typescript": "^7.8.3",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-typescript": "^7.9.0",
     "@types/autoprefixer": "^9.7.1",
     "@types/classnames": "^2.2.10",
     "@types/jest": "^25.1.4",
