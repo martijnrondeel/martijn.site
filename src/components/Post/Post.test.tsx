@@ -17,6 +17,7 @@ describe('Post', () => {
     post: {
       id: 'test-123',
       html: '<p>test</p>',
+      timeToRead: 3,
       fields: {
         slug: '/test',
       },

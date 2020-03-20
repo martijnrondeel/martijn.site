@@ -2,14 +2,14 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Layout } from '../components/Layout';
 import { Sidebar } from '../components/Sidebar';
-import { Feed } from '../components/Feed';
 import { Page } from '../components/Page';
 import { Pagination } from '../components/Pagination';
-import { PageContext, AllMarkdownRemark } from '../types';
+import { PageContext, AllMarkdownRemarkWithRepositories } from '../types';
 import { useSiteMetadata } from '../hooks/use-site-metadata';
+import { Projects } from '../components/Projects';
 
 type Props = {
-  data: AllMarkdownRemark;
+  data: AllMarkdownRemarkWithRepositories;
   pageContext: PageContext;
 };
 
@@ -25,6 +25,7 @@ const ProjectsListTemplate = ({ data, pageContext }: Props) => {
   } = pageContext;
 
   const { edges } = data.allMarkdownRemark;
+  const repositories = data.githubData.data.user.topRepositories.edges;
   const pageTitle =
     currentPage > 0 ? `Projects - Page ${currentPage} - ${siteTitle}` : siteTitle;
 
@@ -32,7 +33,7 @@ const ProjectsListTemplate = ({ data, pageContext }: Props) => {
     <Layout description={siteSubtitle} title={pageTitle}>
       <Sidebar isIndex />
       <Page>
-        <Feed edges={edges} />
+        <Projects edges={edges} repositories={repositories} />
         <Pagination
           hasNextPage={hasNextPage}
           hasPrevPage={hasPrevPage}
@@ -61,6 +62,27 @@ export const query = graphql`
             title
             date
             description
+            project
+          }
+        }
+      }
+    }
+    githubData {
+      data {
+        user {
+          topRepositories {
+            edges {
+              node {
+                name
+                description
+                url
+                stargazers {
+                  totalCount
+                }
+                isArchived
+                pushedAt
+              }
+            }
           }
         }
       }

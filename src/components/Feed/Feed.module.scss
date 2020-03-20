@@ -3,10 +3,16 @@
 
 .feed {
   &__item {
-    @include margin-bottom(1.25);
+    @include padding(.75, 0);
+
+    display: block;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: $color-gray-border;
 
     &:last-child {
       @include margin-bottom(.5);
+      border-bottom: none;
     }
 
     &-title {
@@ -18,7 +24,6 @@
       &-link {
         color: $color-base;
 
-        &:hover,
         &:focus {
           color: $color-base;
           border-bottom: 1px solid $color-base;
@@ -35,28 +40,30 @@
     }
 
     &-meta {
+      display: flex;
+      align-items: center;
+
       &-time {
         font-size: $typographic-small-font-size;
-        color: $color-base;
+        color: $color-gray;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      &-readtime {
+        font-size: $typographic-small-font-size;
+        color: $color-gray;
         font-weight: 600;
         text-transform: uppercase;
       }
 
       &-divider {
-        margin: 0 5px;
+        width: 4px;
+        height: 4px;
+        background-color: $color-primary;
+        margin: .5rem;
+        border-radius: 1rem;
       }
-    }
-
-    &-readmore {
-      font-size: $typographic-base-font-size;
-      color: $color-primary;
-
-      &:hover,
-      &:focus {
-        color: $color-primary;
-        border-bottom: 1px solid $color-primary;
-      }
-
     }
 
   }

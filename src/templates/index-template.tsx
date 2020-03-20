@@ -10,7 +10,7 @@ const IndexTemplate = () => {
   return (
     <Layout description={siteSubtitle} title={'index page hi'}>
       <Sidebar isIndex />
-      <Page>Hi there, this is index page :)</Page>
+      <Page>Hi there, this is the work in progress index page :)</Page>
     </Layout>
   );
 };

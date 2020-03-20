@@ -3,14 +3,14 @@ import renderer from 'react-test-renderer';
 import { StaticQuery, useStaticQuery } from 'gatsby';
 import ProjectsListTemplate from './projects-list-template';
 import siteMetadata from '../../jest/__fixtures__/site-metadata';
-import allMarkdownRemark from '../../jest/__fixtures__/all-markdown-remark';
+import allMarkdownRemarkWithRepositories from '../../jest/__fixtures__/all-markdown-remark-with-repositories';
 import pageContext from '../../jest/__fixtures__/page-context';
 import { RenderCallback } from '../types';
 
 describe('ProjectsListTemplate', () => {
   const props = {
     data: {
-      ...allMarkdownRemark,
+      ...allMarkdownRemarkWithRepositories,
     },
     ...pageContext,
   };

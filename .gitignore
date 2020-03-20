@@ -8,3 +8,4 @@ npm-debug.log
 gatsby-starter-lumen.iml
 coverage/
 yarn-error.log
+.env

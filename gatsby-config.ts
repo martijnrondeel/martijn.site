@@ -1,5 +1,9 @@
+import { config } from 'dotenv';
 import { siteConfig } from './config';
 import { postCssPlugins } from './postcss-config';
+
+// Load .env environment variables into process.env
+config();
 
 // eslint-disable-next-line import/no-default-export
 export default {
@@ -41,6 +45,35 @@ export default {
       options: {
         name: 'assets',
         path: `${__dirname}/static`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-github-api',
+      options: {
+        token: process.env.GITHUB_TOKEN,
+        graphQLQuery: `
+        query ($author: String = "", $repositories: Int = 0) {
+          user(login: $author) {
+            topRepositories(first: $repositories, orderBy: {field: PUSHED_AT, direction: DESC}) {
+              edges {
+                node {
+                  name
+                  description
+                  url
+                  stargazers {
+                    totalCount
+                  }
+                  isArchived
+                  pushedAt
+                }
+              }
+            }
+          }
+        }`,
+        variables: {
+          repositories: 50,
+          author: 'martijnrondeel',
+        },
       },
     },
     {

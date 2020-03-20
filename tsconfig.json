@@ -13,7 +13,6 @@
     "noUnusedLocals": true,
     "strict": true,
     "resolveJsonModule": true,
-    "incremental": true,
     "strictNullChecks": true,
     "alwaysStrict": true,
     "noImplicitAny": true,

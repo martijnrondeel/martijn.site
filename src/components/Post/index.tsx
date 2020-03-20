@@ -4,11 +4,11 @@ import { Comments } from './Comments';
 import { Content } from './Content';
 import { Meta } from './Meta';
 import styles from './Post.module.scss';
-import { Node } from '../../types';
+import { Post as PostType } from '../../types';
 import { Author } from './Author';
 
 type Props = {
-  post: Node;
+  post: PostType;
 };
 
 export const Post = ({ post }: Props) => {

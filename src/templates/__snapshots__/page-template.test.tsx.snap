@@ -37,7 +37,26 @@ exports[`PageTemplate renders correctly 1`] = `
         <p
           className="author__subtitle"
         >
-          Test bio
+          Software engineer with an interest in the 
+          <a
+            href="/"
+          >
+            web
+          </a>
+          ,
+           
+          <a
+            href="/"
+          >
+            creative coding
+          </a>
+           & 
+          <a
+            href="/"
+          >
+            more
+          </a>
+          .
         </p>
       </div>
       <nav

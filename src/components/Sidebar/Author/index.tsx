@@ -36,6 +36,9 @@ export const Author = ({ author, isIndex }: Props) => (
         </Link>
       </h2>
     )}
-    <p className={styles.author__subtitle}>{author.bio}</p>
+    <p className={styles.author__subtitle}>
+      Software engineer with an interest in the <Link to='/'>web</Link>,{' '}
+      <Link to='/'>creative coding</Link> & <Link to='/'>more</Link>.
+    </p>
   </div>
 );

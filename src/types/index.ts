@@ -1,11 +1,5 @@
 import { ReactNode } from 'react';
 
-export type Entry = {
-  getIn: (arg0: string[]) => string;
-};
-
-export type WidgetFor = (arg0: string) => string;
-
 export type RenderCallback = {
   render: (data: any) => ReactNode;
 };
@@ -18,7 +12,7 @@ export type PageContext = {
   hasNextPage: boolean;
 };
 
-export type Node = {
+export type Post = {
   fields: {
     slug: string;
   };
@@ -29,16 +23,27 @@ export type Node = {
     socialImage?: string;
     template?: string;
     slug?: string;
+    project?: string;
   };
+  timeToRead: number;
   html: string;
   id: string;
 };
 
-export type Edge = {
-  node: Node;
+export type Project = {
+  name: string;
+  description: string;
+  url: string;
+  stargazers: {
+    totalCount: number;
+  };
+  isArchived: boolean;
+  pushedAt: string;
 };
 
-export type Edges = Edge[];
+export type Edges = Array<{
+  node: Post;
+}>;
 
 export type AllMarkdownRemark = {
   allMarkdownRemark: {
@@ -50,4 +55,16 @@ export type AllMarkdownRemark = {
   }>;
 };
 
-export type MarkdownRemark = Node;
+export type AllMarkdownRemarkWithRepositories = AllMarkdownRemark & {
+  githubData: {
+    data: {
+      user: {
+        topRepositories: {
+          edges: Array<{
+            node: Project;
+          }>;
+        };
+      };
+    };
+  };
+};

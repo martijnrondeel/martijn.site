@@ -26,6 +26,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "date-fns": "^2.11.0",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.19.43",
     "gatsby-link": "^2.2.30",
     "gatsby-plugin-catch-links": "^2.1.27",
@@ -46,6 +47,7 @@
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-remark-smartypants": "^2.1.22",
     "gatsby-source-filesystem": "^2.1.55",
+    "gatsby-source-github-api": "^0.2.0",
     "gatsby-transformer-remark": "^2.6.58",
     "gatsby-transformer-sharp": "^2.3.18",
     "normalize-scss": "^7.0.1",

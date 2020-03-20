@@ -11,27 +11,26 @@ type Props = {
 export const Feed = ({ edges }: Props) => (
   <div className={styles.feed}>
     {edges.map(edge => (
-      <div className={styles.feed__item} key={edge.node.fields.slug}>
+      <Link
+        className={styles.feed__item}
+        key={edge.node.fields.slug}
+        to={edge.node.fields.slug}>
         <div className={styles['feed__item-meta']}>
           <time
             className={styles['feed__item-meta-time']}
             dateTime={format(new Date(edge.node.frontmatter.date), 'MMMM d, yyyy')}>
-            {format(new Date(edge.node.frontmatter.date), 'MMMM yyyy')}
+            {format(new Date(edge.node.frontmatter.date), 'MMMM d, yyyy')}
           </time>
           <span className={styles['feed__item-meta-divider']} />
+          <span className={styles['feed__item-meta-readtime']}>
+            {edge.node.timeToRead} minute{edge.node.timeToRead > 1 ? 's' : ''} read
+          </span>
         </div>
-        <h2 className={styles['feed__item-title']}>
-          <Link className={styles['feed__item-title-link']} to={edge.node.fields.slug}>
-            {edge.node.frontmatter.title}
-          </Link>
-        </h2>
+        <h2 className={styles['feed__item-title']}>{edge.node.frontmatter.title}</h2>
         <p className={styles['feed__item-description']}>
           {edge.node.frontmatter.description}
         </p>
-        <Link className={styles['feed__item-readmore']} to={edge.node.fields.slug}>
-          Read
-        </Link>
-      </div>
+      </Link>
     ))}
   </div>
 );

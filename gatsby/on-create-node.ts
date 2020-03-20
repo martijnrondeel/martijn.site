@@ -1,11 +1,11 @@
 import { createFilePath } from 'gatsby-source-filesystem';
 import { GatsbyNode } from 'gatsby';
-import { Node } from '../src/types';
+import { Post } from '../src/types';
 
 export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  const nodeCopy = node as Node;
+  const nodeCopy = node as Post;
 
   if (node.internal.type === 'MarkdownRemark') {
     if (typeof nodeCopy.frontmatter.slug !== 'undefined') {

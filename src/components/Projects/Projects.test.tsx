@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Feed } from '.';
+import { Projects } from '.';
 
-describe('Feed', () => {
+describe('Projects', () => {
   const props = {
     edges: [
       {
@@ -36,10 +36,11 @@ describe('Feed', () => {
         },
       },
     ],
+    repositories: [],
   };
 
   it('renders correctly', () => {
-    const tree = renderer.create(<Feed {...props} />).toJSON();
+    const tree = renderer.create(<Projects {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
