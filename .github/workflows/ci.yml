@@ -40,6 +40,7 @@ jobs:
     - name: Compile  
       run: yarn build
       env:
+        GITHUB_API_TOKEN: ${{ secrets.GITHUB_API_TOKEN }}
         PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         CI: true
 
