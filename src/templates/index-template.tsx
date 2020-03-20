@@ -1,73 +1,18 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import { Layout } from '../components/Layout';
 import { Sidebar } from '../components/Sidebar';
-import { Feed } from '../components/Feed';
 import { Page } from '../components/Page';
-import { Pagination } from '../components/Pagination';
-import { PageContext, AllMarkdownRemark } from '../types';
 import { useSiteMetadata } from '../hooks/use-site-metadata';
 
-type Props = {
-  data: AllMarkdownRemark;
-  pageContext: PageContext;
-};
-
-const IndexTemplate = ({ data, pageContext }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
-
-  const {
-    currentPage,
-    hasNextPage,
-    hasPrevPage,
-    prevPagePath,
-    nextPagePath,
-  } = pageContext;
-
-  const { edges } = data.allMarkdownRemark;
-  const pageTitle =
-    currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
+const IndexTemplate = () => {
+  const { subtitle: siteSubtitle } = useSiteMetadata();
 
   return (
-    <Layout description={siteSubtitle} title={pageTitle}>
+    <Layout description={siteSubtitle} title={'index page hi'}>
       <Sidebar isIndex />
-      <Page>
-        <Feed edges={edges} />
-        <Pagination
-          hasNextPage={hasNextPage}
-          hasPrevPage={hasPrevPage}
-          nextPagePath={nextPagePath}
-          prevPagePath={prevPagePath}
-        />
-      </Page>
+      <Page>Hi there, this is the work in progress index page :)</Page>
     </Layout>
   );
 };
-
-export const query = graphql`
-  query IndexTemplate($postsLimit: Int!, $postsOffset: Int!) {
-    allMarkdownRemark(
-      limit: $postsLimit
-      skip: $postsOffset
-      filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
-      sort: { order: DESC, fields: [frontmatter___date] }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-            categorySlug
-          }
-          frontmatter {
-            title
-            date
-            category
-            description
-          }
-        }
-      }
-    }
-  }
-`;
 
 export default IndexTemplate;

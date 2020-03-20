@@ -12,20 +12,20 @@ type Props = {
   };
 };
 
-const PageTemplate = ({ data }: Props) => {
+const ProjectTemplate = ({ data }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const { html: pageBody } = data.markdownRemark;
   const { frontmatter } = data.markdownRemark;
-  const { title: pageTitle, description: pageDescription, socialImage } = frontmatter;
+  const { title: projectTitle, description: pageDescription, socialImage } = frontmatter;
   const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
 
   return (
     <Layout
       description={metaDescription}
       socialImage={socialImage}
-      title={`${pageTitle} - ${siteTitle}`}>
+      title={`${projectTitle} - ${siteTitle}`}>
       <Sidebar />
-      <Page title={pageTitle}>
+      <Page title={projectTitle}>
         <div dangerouslySetInnerHTML={{ __html: pageBody }} />
       </Page>
     </Layout>
@@ -33,7 +33,7 @@ const PageTemplate = ({ data }: Props) => {
 };
 
 export const query = graphql`
-  query PageBySlug($slug: String!) {
+  query ProjectBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
@@ -47,4 +47,4 @@ export const query = graphql`
   }
 `;
 
-export default PageTemplate;
+export default ProjectTemplate;

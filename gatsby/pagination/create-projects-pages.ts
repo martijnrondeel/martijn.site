@@ -2,7 +2,7 @@ import { resolve } from 'path';
 import { GatsbyNode } from 'gatsby';
 import { siteConfig } from '../../config';
 
-export const createPostsPages: GatsbyNode['createPages'] = async ({
+export const createProjectsPages: GatsbyNode['createPages'] = async ({
   graphql,
   actions,
 }) => {
@@ -11,7 +11,7 @@ export const createPostsPages: GatsbyNode['createPages'] = async ({
   const result = await graphql<any>(`
     {
       allMarkdownRemark(
-        filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+        filter: { frontmatter: { template: { eq: "project" }, draft: { ne: true } } }
       ) {
         totalCount
       }
@@ -23,7 +23,7 @@ export const createPostsPages: GatsbyNode['createPages'] = async ({
   }
 
   if (!result.data) {
-    throw new Error('ERROR: Could not fetch posts on build');
+    throw new Error('ERROR: Could not fetch projects on build');
   }
 
   const { postsPerPage } = siteConfig;
@@ -31,14 +31,14 @@ export const createPostsPages: GatsbyNode['createPages'] = async ({
 
   for (let i = 0; i < numPages; i += 1) {
     createPage({
-      path: i === 0 ? '/blog' : `/blog/page/${i}`,
-      component: resolve('./src/templates/posts-list-template.tsx'),
+      path: i === 0 ? '/projects' : `/projects/page/${i}`,
+      component: resolve('./src/templates/projects-list-template.tsx'),
       context: {
         currentPage: i,
         postsLimit: postsPerPage,
         postsOffset: i * postsPerPage,
-        prevPagePath: i <= 1 ? '/blog' : `/blog/page/${i - 1}`,
-        nextPagePath: `/blog/page/${i + 1}`,
+        prevPagePath: i <= 1 ? '/projects' : `/projects/page/${i - 1}`,
+        nextPagePath: `/projects/page/${i + 1}`,
         hasPrevPage: i !== 0,
         hasNextPage: i !== numPages - 1,
       },

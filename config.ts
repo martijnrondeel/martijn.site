@@ -4,7 +4,7 @@ export const siteConfig = {
   url: 'https://martijn.site',
   pathPrefix: '/',
   title: 'martijn.site',
-  subtitle: 'Software engineer with passion for the web, creative coding & games.',
+  subtitle: 'Software engineer with an interest in the web, creative coding & more.',
   copyright: '',
   repo: repository,
   disqusShortname: '',
@@ -13,22 +13,22 @@ export const siteConfig = {
   useKatex: false,
   menu: [
     {
-      label: 'Articles',
-      path: '/',
+      label: 'Blog',
+      path: '/blog',
+    },
+    {
+      label: 'Projects',
+      path: '/projects',
     },
     {
       label: 'About me',
       path: '/pages/about',
     },
-    {
-      label: 'Contact me',
-      path: '/pages/contacts',
-    },
   ],
   author: {
     name: 'Martijn Rondeel',
     photo: '/photo.jpg',
-    bio: 'Software engineer with passion for the web, creative coding & games.',
+    bio: 'Software engineer with an interest in the web, creative coding & more.',
     contacts: {
       email: 'martijn@rondeel.email',
       facebook: '',

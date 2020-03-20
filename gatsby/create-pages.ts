@@ -1,8 +1,7 @@
 import { resolve } from 'path';
 import { GatsbyNode } from 'gatsby';
-import { createTagsPages } from './pagination/create-tags-pages';
-import { createCategoriesPages } from './pagination/create-categories-pages';
 import { createPostsPages } from './pagination/create-posts-pages';
+import { createProjectsPages } from './pagination/create-projects-pages';
 import { AllMarkdownRemark } from '../src/types';
 
 export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions }) => {
@@ -15,21 +14,14 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
     context: {},
   });
 
-  // Tags list
+  // Home page
   createPage({
-    path: '/tags',
-    component: resolve('./src/templates/tags-list-template.tsx'),
+    path: '/',
+    component: resolve('./src/templates/index-template.tsx'),
     context: {},
   });
 
-  // Categories list
-  createPage({
-    path: '/categories',
-    component: resolve('./src/templates/categories-list-template.tsx'),
-    context: {},
-  });
-
-  // Posts and pages from markdown
+  // Get posts, pages and projects from markdown
   const result = await graphql<AllMarkdownRemark>(`
     {
       allMarkdownRemark(filter: { frontmatter: { draft: { ne: true } } }) {
@@ -57,27 +49,36 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
 
   const { edges } = result.data.allMarkdownRemark;
 
+  // Creates the individual page, post and project pages
   edges.forEach(edge => {
-    if (edge.node.frontmatter.template === 'page') {
-      createPage({
-        path: edge.node.fields.slug,
-        component: resolve('./src/templates/page-template.tsx'),
-        context: { slug: edge.node.fields.slug },
-      });
-    } else if (edge.node.frontmatter.template === 'post') {
-      createPage({
-        path: edge.node.fields.slug,
-        component: resolve('./src/templates/post-template.tsx'),
-        context: { slug: edge.node.fields.slug },
-      });
+    switch (edge.node.frontmatter.template) {
+      case 'page':
+        createPage({
+          path: edge.node.fields.slug,
+          component: resolve('./src/templates/page-template.tsx'),
+          context: { slug: edge.node.fields.slug },
+        });
+        break;
+      case 'post':
+        createPage({
+          path: edge.node.fields.slug,
+          component: resolve('./src/templates/post-template.tsx'),
+          context: { slug: edge.node.fields.slug },
+        });
+        break;
+      case 'project':
+        createPage({
+          path: edge.node.fields.slug,
+          component: resolve('./src/templates/project-template.tsx'),
+          context: { slug: edge.node.fields.slug },
+        });
+        break;
     }
   });
 
-  // Feeds
-  // @ts-ignore
-  createTagsPages({ graphql, actions });
-  // @ts-ignore
-  createCategoriesPages({ graphql, actions });
+  // Creates feeds for the above pages
   // @ts-ignore
   createPostsPages({ graphql, actions });
+  // @ts-ignore
+  createProjectsPages({ graphql, actions });
 };

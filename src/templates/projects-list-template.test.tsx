@@ -1,16 +1,16 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { StaticQuery, useStaticQuery } from 'gatsby';
-import CategoryTemplate from './category-template';
+import ProjectsListTemplate from './projects-list-template';
 import siteMetadata from '../../jest/__fixtures__/site-metadata';
-import allMarkdownRemark from '../../jest/__fixtures__/all-markdown-remark';
+import allMarkdownRemarkWithRepositories from '../../jest/__fixtures__/all-markdown-remark-with-repositories';
 import pageContext from '../../jest/__fixtures__/page-context';
 import { RenderCallback } from '../types';
 
-describe('CategoryTemplate', () => {
+describe('ProjectsListTemplate', () => {
   const props = {
     data: {
-      ...allMarkdownRemark,
+      ...allMarkdownRemarkWithRepositories,
     },
     ...pageContext,
   };
@@ -23,7 +23,7 @@ describe('CategoryTemplate', () => {
   });
 
   it('renders correctly', () => {
-    const tree = renderer.create(<CategoryTemplate {...props} />).toJSON();
+    const tree = renderer.create(<ProjectsListTemplate {...props} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

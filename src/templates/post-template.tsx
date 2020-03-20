@@ -2,12 +2,12 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Layout } from '../components/Layout';
 import { Post } from '../components/Post';
-import { MarkdownRemark } from '../types';
+import { Post as PostType } from '../types';
 import { useSiteMetadata } from '../hooks/use-site-metadata';
 
 type Props = {
   data: {
-    markdownRemark: MarkdownRemark;
+    markdownRemark: PostType;
   };
 };
 
@@ -34,12 +34,10 @@ export const query = graphql`
       html
       fields {
         slug
-        tagSlugs
       }
       frontmatter {
         date
         description
-        tags
         title
         socialImage
       }

@@ -15,4 +15,5 @@
   "javascript.referencesCodeLens.showOnAllFunctions": false,
   "typescript.referencesCodeLens.showOnAllFunctions": false,
   "typescript.tsserver.maxTsServerMemory": 4092,
+  "npm.packageManager": "yarn",
 }

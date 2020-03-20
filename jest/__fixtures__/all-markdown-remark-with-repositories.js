@@ -20,6 +20,7 @@ module.exports = {
             date: '2016-09-01',
             description: 'test_0',
             title: 'test_0',
+            project: 'banana-shop',
           },
         },
       },
@@ -36,5 +37,27 @@ module.exports = {
         },
       },
     ],
+  },
+  githubData: {
+    data: {
+      user: {
+        topRepositories: {
+          edges: [
+            {
+              node: {
+                name: 'banana-shop',
+                description: 'the greatest shop in town',
+                url: 'banana.com',
+                stargazers: {
+                  totalCount: 32,
+                },
+                isArchived: true,
+                pushedAt: '12-03-2008',
+              },
+            },
+          ],
+        },
+      },
+    },
   },
 };

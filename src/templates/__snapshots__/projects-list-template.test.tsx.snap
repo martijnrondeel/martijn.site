@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CategoriesListTemplate renders correctly 1`] = `
+exports[`ProjectsListTemplate renders correctly 1`] = `
 <div
   className="layout"
 >
@@ -24,7 +24,7 @@ exports[`CategoriesListTemplate renders correctly 1`] = `
             width="120"
           />
         </a>
-        <h2
+        <h1
           className="author__title"
         >
           <a
@@ -33,11 +33,30 @@ exports[`CategoriesListTemplate renders correctly 1`] = `
           >
             Test name
           </a>
-        </h2>
+        </h1>
         <p
           className="author__subtitle"
         >
-          Test bio
+          Software engineer with an interest in the 
+          <a
+            href="/"
+          >
+            web
+          </a>
+          ,
+           
+          <a
+            href="/"
+          >
+            creative coding
+          </a>
+           & 
+          <a
+            href="/"
+          >
+            more
+          </a>
+          .
         </p>
       </div>
       <nav
@@ -439,36 +458,126 @@ exports[`CategoriesListTemplate renders correctly 1`] = `
     <div
       className="page__inner"
     >
-      <h1
-        className="page__title"
-      >
-        Categories
-      </h1>
       <div
         className="page__body"
       >
-        <ul>
-          <li>
-            <a
-              href="/category/test-0/"
+        <div
+          className="projects"
+        >
+          <div
+            className="projects__item"
+          >
+            <div
+              className="projects__item-meta"
+            >
+              <span
+                className="projects__item-meta-stars"
+              >
+                32
+                 ★
+              </span>
+              <span
+                className="projects__item-meta-archived"
+              >
+                Archived
+              </span>
+              <span
+                className="projects__item-meta-divider"
+              />
+            </div>
+            <h2
+              className="projects__item-title"
+            >
+              <a
+                className="projects__item-title-link"
+                href="/test_0"
+              >
+                test_0
+              </a>
+            </h2>
+            <p
+              className="projects__item-description"
             >
               test_0
-               (
-              1
-              )
-            </a>
-          </li>
-          <li>
+            </p>
             <a
-              href="/category/test-1/"
+              className="projects__item-readmore"
+              href="/test_0"
+            >
+              Read
+            </a>
+            <a
+              className="projects__item-readmore"
+              href="/test_0"
+            >
+              View on GitHub
+            </a>
+          </div>
+          <div
+            className="projects__item"
+          >
+            <div
+              className="projects__item-meta"
+            >
+              <span
+                className="projects__item-meta-divider"
+              />
+            </div>
+            <h2
+              className="projects__item-title"
+            >
+              <a
+                className="projects__item-title-link"
+                href="/test_1"
+              >
+                test_1
+              </a>
+            </h2>
+            <p
+              className="projects__item-description"
             >
               test_1
-               (
-              2
-              )
+            </p>
+            <a
+              className="projects__item-readmore"
+              href="/test_1"
+            >
+              Read
             </a>
-          </li>
-        </ul>
+            <a
+              className="projects__item-readmore"
+              href="/test_1"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </div>
+        <div
+          className="pagination"
+        >
+          <div
+            className="pagination__prev"
+          >
+            <a
+              className="pagination__prev-link"
+              href="/page/1"
+              rel="prev"
+            >
+              ← PREV
+            </a>
+          </div>
+          <div
+            className="pagination__next"
+          >
+            <a
+              className="pagination__next-link"
+              href="/page/3"
+              rel="next"
+            >
+              → NEXT
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

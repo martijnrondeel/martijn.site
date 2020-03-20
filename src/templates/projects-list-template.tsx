@@ -2,40 +2,38 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { Layout } from '../components/Layout';
 import { Sidebar } from '../components/Sidebar';
-import { Feed } from '../components/Feed';
 import { Page } from '../components/Page';
 import { Pagination } from '../components/Pagination';
-import { AllMarkdownRemark, PageContext } from '../types';
+import { PageContext, AllMarkdownRemarkWithRepositories } from '../types';
 import { useSiteMetadata } from '../hooks/use-site-metadata';
+import { Projects } from '../components/Projects';
 
 type Props = {
-  data: AllMarkdownRemark;
+  data: AllMarkdownRemarkWithRepositories;
   pageContext: PageContext;
 };
 
-const TagTemplate = ({ data, pageContext }: Props) => {
+const ProjectsListTemplate = ({ data, pageContext }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
 
   const {
-    tag,
     currentPage,
+    hasNextPage,
+    hasPrevPage,
     prevPagePath,
     nextPagePath,
-    hasPrevPage,
-    hasNextPage,
   } = pageContext;
 
   const { edges } = data.allMarkdownRemark;
+  const repositories = data.githubData.data.user.topRepositories.edges;
   const pageTitle =
-    currentPage > 0
-      ? `All Posts tagged as "${tag}" - Page ${currentPage} - ${siteTitle}`
-      : `All Posts tagged as "${tag}" - ${siteTitle}`;
+    currentPage > 0 ? `Projects - Page ${currentPage} - ${siteTitle}` : siteTitle;
 
   return (
     <Layout description={siteSubtitle} title={pageTitle}>
-      <Sidebar />
-      <Page title={tag}>
-        <Feed edges={edges} />
+      <Sidebar isIndex />
+      <Page>
+        <Projects edges={edges} repositories={repositories} />
         <Pagination
           hasNextPage={hasNextPage}
           hasPrevPage={hasPrevPage}
@@ -48,36 +46,43 @@ const TagTemplate = ({ data, pageContext }: Props) => {
 };
 
 export const query = graphql`
-  query TagPage($tag: String, $postsLimit: Int!, $postsOffset: Int!) {
-    site {
-      siteMetadata {
-        title
-        subtitle
-      }
-    }
+  query ProjectsListTemplate($postsLimit: Int!, $postsOffset: Int!) {
     allMarkdownRemark(
       limit: $postsLimit
       skip: $postsOffset
-      filter: {
-        frontmatter: {
-          tags: { in: [$tag] }
-          template: { eq: "post" }
-          draft: { ne: true }
-        }
-      }
+      filter: { frontmatter: { template: { eq: "project" }, draft: { ne: true } } }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
         node {
           fields {
             slug
-            categorySlug
           }
           frontmatter {
             title
             date
-            category
             description
+            project
+          }
+        }
+      }
+    }
+    githubData {
+      data {
+        user {
+          topRepositories {
+            edges {
+              node {
+                name
+                description
+                url
+                stargazers {
+                  totalCount
+                }
+                isArchived
+                pushedAt
+              }
+            }
           }
         }
       }
@@ -85,4 +90,4 @@ export const query = graphql`
   }
 `;
 
-export default TagTemplate;
+export default ProjectsListTemplate;
