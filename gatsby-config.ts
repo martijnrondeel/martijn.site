@@ -50,7 +50,7 @@ export default {
     {
       resolve: 'gatsby-source-github-api',
       options: {
-        token: process.env.GITHUB_TOKEN,
+        token: process.env.GITHUB_API_TOKEN,
         graphQLQuery: `
         query ($author: String = "", $repositories: Int = 0) {
           user(login: $author) {
