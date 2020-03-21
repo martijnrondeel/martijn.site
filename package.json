@@ -90,7 +90,7 @@
     "lost": "^8.3.1",
     "node-sass": "^4.13.1",
     "postcss-pxtorem": "^5.1.1",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.1",
     "react-test-renderer": "^16.13.1",
     "ts-node": "^8.7.0",
     "typescript": "^3.8.3"
