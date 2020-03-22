@@ -12,9 +12,9 @@ type Props = {
 
 export const Projects = ({ edges, repositories }: Props) => (
   <div className={styles.projects}>
-    {edges.map(edge => {
+    {edges.map((edge) => {
       const matchedRepository = repositories.find(
-        repository => repository.node.name === edge.node.frontmatter.project,
+        (repository) => repository.node.name === edge.node.frontmatter.project,
       );
 
       return (
