@@ -50,7 +50,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
   const { edges } = result.data.allMarkdownRemark;
 
   // Creates the individual page, post and project pages
-  edges.forEach(edge => {
+  edges.forEach((edge) => {
     switch (edge.node.frontmatter.template) {
       case 'page':
         createPage({
