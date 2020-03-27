@@ -3,6 +3,7 @@ import { Layout } from '../components/Layout';
 import { Sidebar } from '../components/Sidebar';
 import { Page } from '../components/Page';
 import { useSiteMetadata } from '../hooks/use-site-metadata';
+import styles from './index-template.module.scss';
 
 const IndexTemplate = () => {
   const { subtitle: siteSubtitle } = useSiteMetadata();
@@ -12,7 +13,7 @@ const IndexTemplate = () => {
       <Sidebar isIndex />
       <Page>
         <h1>
-          <span aria-label='hello sign' role='img'>
+          <span aria-label='hello sign' className={styles.wave} role='img'>
             👋
           </span>{' '}
           Hello!
