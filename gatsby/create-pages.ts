@@ -1,7 +1,6 @@
 import { resolve } from 'path';
 import { GatsbyNode } from 'gatsby';
 import { createPostsPages } from './pagination/create-posts-pages';
-import { createProjectsPages } from './pagination/create-projects-pages';
 import { AllMarkdownRemark } from '../src/types';
 
 export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions }) => {
@@ -18,6 +17,13 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
   createPage({
     path: '/',
     component: resolve('./src/templates/index-template.tsx'),
+    context: {},
+  });
+
+  // Projects page
+  createPage({
+    path: '/projects',
+    component: resolve('./src/templates/projects-list-template.tsx'),
     context: {},
   });
 
@@ -72,6 +78,4 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
   // Creates feeds for the above pages
   // @ts-ignore
   createPostsPages({ graphql, actions });
-  // @ts-ignore
-  createProjectsPages({ graphql, actions });
 };
