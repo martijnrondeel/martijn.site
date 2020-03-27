@@ -20,10 +20,6 @@ export const siteConfig = {
       label: 'Projects',
       path: '/projects',
     },
-    {
-      label: 'About me',
-      path: '/pages/about',
-    },
   ],
   author: {
     name: 'Martijn Rondeel',

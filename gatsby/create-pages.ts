@@ -1,7 +1,6 @@
 import { resolve } from 'path';
 import { GatsbyNode } from 'gatsby';
 import { createPostsPages } from './pagination/create-posts-pages';
-import { createProjectsPages } from './pagination/create-projects-pages';
 import { AllMarkdownRemark } from '../src/types';
 
 export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions }) => {
@@ -21,7 +20,14 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
     context: {},
   });
 
-  // Get posts, pages and projects from markdown
+  // Projects page
+  createPage({
+    path: '/projects',
+    component: resolve('./src/templates/projects-list-template.tsx'),
+    context: {},
+  });
+
+  // Get posts and projects from markdown
   const result = await graphql<AllMarkdownRemark>(`
     {
       allMarkdownRemark(filter: { frontmatter: { draft: { ne: true } } }) {
@@ -50,15 +56,8 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
   const { edges } = result.data.allMarkdownRemark;
 
   // Creates the individual page, post and project pages
-  edges.forEach(edge => {
+  edges.forEach((edge) => {
     switch (edge.node.frontmatter.template) {
-      case 'page':
-        createPage({
-          path: edge.node.fields.slug,
-          component: resolve('./src/templates/page-template.tsx'),
-          context: { slug: edge.node.fields.slug },
-        });
-        break;
       case 'post':
         createPage({
           path: edge.node.fields.slug,
@@ -79,6 +78,4 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
   // Creates feeds for the above pages
   // @ts-ignore
   createPostsPages({ graphql, actions });
-  // @ts-ignore
-  createProjectsPages({ graphql, actions });
 };

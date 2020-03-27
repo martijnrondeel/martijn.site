@@ -10,7 +10,7 @@ type Props = {
 
 export const Feed = ({ edges }: Props) => (
   <div className={styles.feed}>
-    {edges.map(edge => (
+    {edges.map((edge) => (
       <Link
         className={styles.feed__item}
         key={edge.node.fields.slug}
