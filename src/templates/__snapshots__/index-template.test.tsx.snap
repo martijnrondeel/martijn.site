@@ -461,7 +461,29 @@ exports[`IndexTemplate renders correctly 1`] = `
       <div
         className="page__body"
       >
-        Hi there, this is the work in progress index page :)
+        <h1>
+          <span
+            aria-label="hello sign"
+            role="img"
+          >
+            👋
+          </span>
+           
+          Hello!
+        </h1>
+        <p>
+          My name is Martijn and I’m a software engineer living in The Netherlands. I’m focused on turning ideas into engaging, pragmatic software, doing my best work when collaborating closely with stakeholders, designers and developers.
+        </p>
+        <p>
+          In my free time, I enjoy bouldering, photography, playing the piano and nurturing my way too large amount of houseplants.
+           
+          <span
+            aria-label="plant"
+            role="img"
+          >
+            🌱
+          </span>
+        </p>
       </div>
     </div>
   </div>
