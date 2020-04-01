@@ -30,7 +30,7 @@
     "gatsby": "^2.20.10",
     "gatsby-link": "^2.3.1",
     "gatsby-plugin-catch-links": "^2.2.1",
-    "gatsby-plugin-google-gtag": "^1.2.1",
+    "gatsby-plugin-google-gtag": "^2.0.0",
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-offline": "^3.1.2",
     "gatsby-plugin-optimize-svgs": "^1.0.4",
