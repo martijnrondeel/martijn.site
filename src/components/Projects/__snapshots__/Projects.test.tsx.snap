@@ -4,81 +4,41 @@ exports[`Projects renders correctly 1`] = `
 <div
   className="projects"
 >
-  <div
+  <a
     className="projects__item"
+    href="/test_0"
   >
-    <div
-      className="projects__item-meta"
-    >
-      <span
-        className="projects__item-meta-divider"
-      />
-    </div>
     <h2
       className="projects__item-title"
     >
-      <a
-        className="projects__item-title-link"
-        href="/test_0"
-      >
-        test_0
-      </a>
+      test_0
     </h2>
     <p
       className="projects__item-description"
     >
       test_0
     </p>
-    <a
-      className="projects__item-readmore"
-      href="/test_0"
-    >
-      Read
-    </a>
-    <a
-      className="projects__item-readmore"
-      href="/test_0"
-    >
-      View on GitHub
-    </a>
-  </div>
-  <div
-    className="projects__item"
-  >
     <div
       className="projects__item-meta"
-    >
-      <span
-        className="projects__item-meta-divider"
-      />
-    </div>
+    />
+  </a>
+  <a
+    className="projects__item"
+    href="/test_1"
+  >
     <h2
       className="projects__item-title"
     >
-      <a
-        className="projects__item-title-link"
-        href="/test_1"
-      >
-        test_1
-      </a>
+      test_1
     </h2>
     <p
       className="projects__item-description"
     >
       test_1
     </p>
-    <a
-      className="projects__item-readmore"
-      href="/test_1"
-    >
-      Read
-    </a>
-    <a
-      className="projects__item-readmore"
-      href="/test_1"
-    >
-      View on GitHub
-    </a>
-  </div>
+    <div
+      className="projects__item-meta"
+    />
+  </a>
 </div>
 `;

@@ -480,88 +480,152 @@ exports[`ProjectsListTemplate renders correctly 1`] = `
         <div
           className="projects"
         >
-          <div
+          <a
             className="projects__item"
+            href="https://github.com/martijnrondeel/martijn.site"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
           >
-            <div
-              className="projects__item-meta"
-            >
-              <span
-                className="projects__item-meta-stars"
-              >
-                2
-                 ★
-              </span>
-              <span
-                className="projects__item-meta-divider"
-              />
-            </div>
             <h2
               className="projects__item-title"
             >
-              <a
-                className="projects__item-title-link"
-                href="test-1"
-              >
-                test 1
-              </a>
+              test 1
             </h2>
             <p
               className="projects__item-description"
             >
               test 1
             </p>
-            <a
-              className="projects__item-readmore"
-              href="test-1"
-            >
-              Read
-            </a>
-            <a
-              className="projects__item-readmore"
-              href="test-1"
-            >
-              View on GitHub
-            </a>
-          </div>
-          <div
-            className="projects__item"
-          >
             <div
               className="projects__item-meta"
             >
-              <span
-                className="projects__item-meta-divider"
-              />
+              <div
+                className="projects__item-meta-topics"
+              >
+                <span
+                  className="projects__item-meta-topic"
+                >
+                  personal-website
+                </span>
+                <span
+                  className="projects__item-meta-topic"
+                >
+                  gatsby
+                </span>
+                <span
+                  className="projects__item-meta-topic"
+                >
+                  react
+                </span>
+                <span
+                  className="projects__item-meta-topic"
+                >
+                  nodejs
+                </span>
+                <span
+                  className="projects__item-meta-topic"
+                >
+                  typescript
+                </span>
+                <span
+                  className="projects__item-meta-topic"
+                >
+                  github-actions
+                </span>
+                <span
+                  className="projects__item-meta-topic"
+                >
+                  graphql
+                </span>
+              </div>
+              <div
+                className="projects__item-meta-languages"
+              >
+                <div
+                  className="projects__item-meta-stars"
+                >
+                  <span
+                    className="projects__item-meta-stars-icon"
+                  >
+                    ★
+                  </span>
+                  2
+                </div>
+                <div>
+                  <div
+                    className="projects__item-meta-language"
+                  >
+                    <span
+                      className="projects__item-meta-language-color"
+                      style={
+                        Object {
+                          "backgroundColor": "#2b7489",
+                        }
+                      }
+                    />
+                    <span
+                      className="projects__item-meta-language-name"
+                    >
+                      TypeScript
+                    </span>
+                  </div>
+                  <div
+                    className="projects__item-meta-language"
+                  >
+                    <span
+                      className="projects__item-meta-language-color"
+                      style={
+                        Object {
+                          "backgroundColor": "#563d7c",
+                        }
+                      }
+                    />
+                    <span
+                      className="projects__item-meta-language-name"
+                    >
+                      CSS
+                    </span>
+                  </div>
+                  <div
+                    className="projects__item-meta-language"
+                  >
+                    <span
+                      className="projects__item-meta-language-color"
+                      style={
+                        Object {
+                          "backgroundColor": "#f1e05a",
+                        }
+                      }
+                    />
+                    <span
+                      className="projects__item-meta-language-name"
+                    >
+                      JavaScript
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
+          </a>
+          <a
+            className="projects__item"
+            href="test-2"
+          >
             <h2
               className="projects__item-title"
             >
-              <a
-                className="projects__item-title-link"
-                href="test-2"
-              >
-                test 2
-              </a>
+              test 2
             </h2>
             <p
               className="projects__item-description"
             >
               test 2
             </p>
-            <a
-              className="projects__item-readmore"
-              href="test-2"
-            >
-              Read
-            </a>
-            <a
-              className="projects__item-readmore"
-              href="test-2"
-            >
-              View on GitHub
-            </a>
-          </div>
+            <div
+              className="projects__item-meta"
+            />
+          </a>
         </div>
       </div>
     </div>

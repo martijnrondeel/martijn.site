@@ -62,6 +62,19 @@ export const query = graphql`
               }
               isArchived
               pushedAt
+              languages {
+                nodes {
+                  name
+                  color
+                }
+              }
+              repositoryTopics {
+                nodes {
+                  topic {
+                    name
+                  }
+                }
+              }
             }
           }
         }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { Edges, Repository } from '../../types';
 import styles from './Projects.module.scss';
 
@@ -15,36 +16,81 @@ export const Projects = ({ edges, repositories }: Props) => (
         (repository) => repository.name === edge.node.frontmatter.project,
       );
 
-      return (
-        <div className={styles.projects__item} key={edge.node.fields.slug}>
-          <div className={styles['projects__item-meta']}>
-            {matchedRepository ? (
-              <span className={styles['projects__item-meta-stars']}>
-                {matchedRepository.stargazers.totalCount} ★
-              </span>
-            ) : null}
-            {matchedRepository?.isArchived ? (
-              <span className={styles['projects__item-meta-archived']}>Archived</span>
-            ) : null}
-            <span className={styles['projects__item-meta-divider']} />
-          </div>
+      const content = (
+        <>
           <h2 className={styles['projects__item-title']}>
-            <Link
-              className={styles['projects__item-title-link']}
-              to={edge.node.fields.slug}>
-              {edge.node.frontmatter.title}
-            </Link>
+            {edge.node.frontmatter.title}
           </h2>
+          {matchedRepository?.isArchived ? (
+            <span className={styles['projects__item-meta-archived']}>Archived</span>
+          ) : null}
           <p className={styles['projects__item-description']}>
             {edge.node.frontmatter.description}
           </p>
-          <Link className={styles['projects__item-readmore']} to={edge.node.fields.slug}>
-            Read
-          </Link>
-          <Link className={styles['projects__item-readmore']} to={edge.node.fields.slug}>
-            View on GitHub
-          </Link>
-        </div>
+
+          <div className={styles['projects__item-meta']}>
+            {matchedRepository && matchedRepository.repositoryTopics.nodes.length > 0 ? (
+              <div className={styles['projects__item-meta-topics']}>
+                {matchedRepository.repositoryTopics.nodes.map((r) => (
+                  <span
+                    className={styles['projects__item-meta-topic']}
+                    key={r.topic.name}>
+                    {r.topic.name}
+                  </span>
+                ))}
+              </div>
+            ) : null}
+
+            {matchedRepository ? (
+              <div className={styles['projects__item-meta-languages']}>
+                {matchedRepository.stargazers.totalCount > 0 ? (
+                  <div className={styles['projects__item-meta-stars']}>
+                    <span className={styles['projects__item-meta-stars-icon']}>★</span>
+                    {matchedRepository.stargazers.totalCount}
+                  </div>
+                ) : null}
+                {matchedRepository.languages.nodes.length > 0 ? (
+                  <div>
+                    {matchedRepository.languages.nodes.map((l) => (
+                      <div
+                        className={styles['projects__item-meta-language']}
+                        key={l.name}>
+                        <span
+                          className={styles['projects__item-meta-language-color']}
+                          style={{ backgroundColor: l.color }}
+                        />
+                        <span className={styles['projects__item-meta-language-name']}>
+                          {l.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
+          </div>
+        </>
+      );
+
+      if (matchedRepository) {
+        return (
+          <OutboundLink
+            className={styles.projects__item}
+            href={matchedRepository.url}
+            key={edge.node.fields.slug}
+            rel='noopener noreferrer'
+            target='_blank'>
+            {content}
+          </OutboundLink>
+        );
+      }
+      return (
+        <Link
+          className={styles.projects__item}
+          key={edge.node.fields.slug}
+          to={edge.node.fields.slug}>
+          {content}
+        </Link>
       );
     })}
   </div>
