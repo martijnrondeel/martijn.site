@@ -14,6 +14,8 @@ type Props = {
 const ProjectsListTemplate = ({ data }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
 
+  console.log(data);
+
   const { edges } = data.allMarkdownRemark;
   const repositories = data.githubData.data.user.topRepositories.nodes;
 
@@ -51,17 +53,15 @@ export const query = graphql`
       data {
         user {
           topRepositories {
-            edges {
-              node {
-                name
-                description
-                url
-                stargazers {
-                  totalCount
-                }
-                isArchived
-                pushedAt
+            nodes {
+              name
+              description
+              url
+              stargazers {
+                totalCount
               }
+              isArchived
+              pushedAt
             }
           }
         }
