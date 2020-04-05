@@ -106,6 +106,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="mailto:#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -128,6 +129,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="https://www.facebook.com/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -150,6 +152,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="https://t.me/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -172,6 +175,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="https://twitter.com/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -194,6 +198,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="https://github.com/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -216,6 +221,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -238,6 +244,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="https://vk.com/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -260,6 +267,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="https://www.linkedin.com/in/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -282,6 +290,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="https://www.instagram.com/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -304,6 +313,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="line://ti/p/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -326,6 +336,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="https://www.gitlab.com/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -348,6 +359,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="https://www.weibo.com/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -370,6 +382,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="https://www.codepen.io/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -392,6 +405,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="https://www.youtube.com/channel/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -414,6 +428,7 @@ exports[`Sidebar renders correctly 1`] = `
           <a
             className="contacts__list-item-link"
             href="https://soundcloud.com/#"
+            onClick={[Function]}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -439,6 +454,7 @@ exports[`Sidebar renders correctly 1`] = `
        
       <a
         href="github.com"
+        onClick={[Function]}
         rel="noopener noreferrer"
         target="_blank"
       >

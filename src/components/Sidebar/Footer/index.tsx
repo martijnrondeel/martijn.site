@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import styles from './Footer.module.scss';
 
 type Props = {
@@ -9,9 +10,9 @@ type Props = {
 export const Footer = ({ copyright, repo }: Props) => (
   <div className={styles.footer}>
     Source @{' '}
-    <a href={repo} rel='noopener noreferrer' target='_blank'>
+    <OutboundLink href={repo} rel='noopener noreferrer' target='_blank'>
       GitHub
-    </a>
+    </OutboundLink>
     <br />
     {copyright}
   </div>
