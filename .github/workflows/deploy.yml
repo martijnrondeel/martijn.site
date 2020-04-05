@@ -55,5 +55,5 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         source: "public"
-        target: "/var/www/public"
+        target: "/var/www"
         rm: true
