@@ -95,6 +95,7 @@ module.exports = {
     quotes: ['warn', 'single', 'avoid-escape'],
     'no-bitwise': 'error',
     'no-continue': 'error',
+    'no-console': 'error',
     'no-dupe-keys': 'error',
     'no-duplicate-case': 'error',
     'no-duplicate-imports': 'error',
