@@ -1,20 +1,18 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Edges, Project } from '../../types';
+import { Edges, Repository } from '../../types';
 import styles from './Projects.module.scss';
 
 type Props = {
   edges: Edges;
-  repositories: Array<{
-    node: Project;
-  }>;
+  repositories: Repository[];
 };
 
 export const Projects = ({ edges, repositories }: Props) => (
   <div className={styles.projects}>
     {edges.map((edge) => {
       const matchedRepository = repositories.find(
-        (repository) => repository.node.name === edge.node.frontmatter.project,
+        (repository) => repository.name === edge.node.frontmatter.project,
       );
 
       return (
@@ -22,10 +20,10 @@ export const Projects = ({ edges, repositories }: Props) => (
           <div className={styles['projects__item-meta']}>
             {matchedRepository ? (
               <span className={styles['projects__item-meta-stars']}>
-                {matchedRepository.node.stargazers.totalCount} ★
+                {matchedRepository.stargazers.totalCount} ★
               </span>
             ) : null}
-            {matchedRepository?.node.isArchived ? (
+            {matchedRepository?.isArchived ? (
               <span className={styles['projects__item-meta-archived']}>Archived</span>
             ) : null}
             <span className={styles['projects__item-meta-divider']} />

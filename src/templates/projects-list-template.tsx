@@ -15,7 +15,7 @@ const ProjectsListTemplate = ({ data }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
 
   const { edges } = data.allMarkdownRemark;
-  const repositories = data.githubData.data.user.topRepositories.edges;
+  const repositories = data.githubData.data.user.topRepositories.nodes;
 
   return (
     <Layout description={siteSubtitle} title={siteTitle}>

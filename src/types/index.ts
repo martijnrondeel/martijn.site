@@ -30,12 +30,25 @@ export type Post = {
   id: string;
 };
 
-export type Project = {
+export type Repository = {
   name: string;
   description: string;
   url: string;
   stargazers: {
     totalCount: number;
+  };
+  languages: {
+    nodes: Array<{
+      name: string;
+      color: string;
+    }>;
+  };
+  repositoryTopics: {
+    nodes: Array<{
+      topic: {
+        name: string;
+      };
+    }>;
   };
   isArchived: boolean;
   pushedAt: string;
@@ -49,10 +62,6 @@ export type AllMarkdownRemark = {
   allMarkdownRemark: {
     edges: Edges;
   };
-  group: Array<{
-    fieldValue: string;
-    totalCount: number;
-  }>;
 };
 
 export type AllMarkdownRemarkWithRepositories = AllMarkdownRemark & {
@@ -60,9 +69,7 @@ export type AllMarkdownRemarkWithRepositories = AllMarkdownRemark & {
     data: {
       user: {
         topRepositories: {
-          edges: Array<{
-            node: Project;
-          }>;
+          nodes: Repository[];
         };
       };
     };

@@ -1,38 +1,34 @@
 module.exports = {
   allMarkdownRemark: {
-    group: [
-      {
-        fieldValue: 'test_0',
-        totalCount: 1,
-      },
-      {
-        fieldValue: 'test_1',
-        totalCount: 2,
-      },
-    ],
     edges: [
       {
         node: {
+          id: 'test-1',
+          html: '<p>test</p>',
+          timeToRead: 3,
           fields: {
-            slug: '/test_0',
+            slug: 'test-1',
           },
           frontmatter: {
             date: '2016-09-01',
-            description: 'test_0',
-            title: 'test_0',
-            project: 'banana-shop',
+            description: 'test 1',
+            title: 'test 1',
+            project: 'martijn.site',
           },
         },
       },
       {
         node: {
+          id: 'test-2',
+          html: '<p>test</p>',
+          timeToRead: 32,
           fields: {
-            slug: '/test_1',
+            slug: 'test-2',
           },
           frontmatter: {
-            date: '2016-09-01',
-            description: 'test_1',
-            title: 'test_1',
+            date: '2016-09-02',
+            description: 'test 2',
+            title: 'test 2',
           },
         },
       },
@@ -42,17 +38,70 @@ module.exports = {
     data: {
       user: {
         topRepositories: {
-          edges: [
+          nodes: [
             {
-              node: {
-                name: 'banana-shop',
-                description: 'the greatest shop in town',
-                url: 'banana.com',
-                stargazers: {
-                  totalCount: 32,
-                },
-                isArchived: true,
-                pushedAt: '12-03-2008',
+              name: 'martijn.site',
+              description: 'Personal website',
+              url: 'https://github.com/martijnrondeel/martijn.site',
+              stargazers: {
+                totalCount: 2,
+              },
+              isArchived: false,
+              pushedAt: '2020-04-05T14:38:20Z',
+              languages: {
+                nodes: [
+                  {
+                    name: 'TypeScript',
+                    color: '#2b7489',
+                  },
+                  {
+                    name: 'CSS',
+                    color: '#563d7c',
+                  },
+                  {
+                    name: 'JavaScript',
+                    color: '#f1e05a',
+                  },
+                ],
+              },
+              repositoryTopics: {
+                nodes: [
+                  {
+                    topic: {
+                      name: 'personal-website',
+                    },
+                  },
+                  {
+                    topic: {
+                      name: 'gatsby',
+                    },
+                  },
+                  {
+                    topic: {
+                      name: 'react',
+                    },
+                  },
+                  {
+                    topic: {
+                      name: 'nodejs',
+                    },
+                  },
+                  {
+                    topic: {
+                      name: 'typescript',
+                    },
+                  },
+                  {
+                    topic: {
+                      name: 'github-actions',
+                    },
+                  },
+                  {
+                    topic: {
+                      name: 'graphql',
+                    },
+                  },
+                ],
               },
             },
           ],

@@ -55,21 +55,33 @@ export default {
         query ($author: String = "", $repositories: Int = 0) {
           user(login: $author) {
             topRepositories(first: $repositories, orderBy: {field: PUSHED_AT, direction: DESC}) {
-              edges {
-                node {
-                  name
-                  description
-                  url
-                  stargazers {
-                    totalCount
+              nodes {
+                name
+                description
+                url
+                stargazers {
+                  totalCount
+                }
+                isArchived
+                pushedAt
+                languages(first: 3, orderBy: {field: SIZE, direction: DESC}) {
+                  nodes {
+                    name
+                    color
                   }
-                  isArchived
-                  pushedAt
+                }
+                repositoryTopics(first: 10) {
+                  nodes {
+                    topic {
+                      name
+                    }
+                  }
                 }
               }
             }
           }
-        }`,
+        }
+        `,
         variables: {
           repositories: 50,
           author: 'martijnrondeel',

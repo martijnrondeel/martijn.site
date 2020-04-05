@@ -482,7 +482,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
         >
           <a
             className="feed__item"
-            href="/test_0"
+            href="test-1"
           >
             <div
               className="feed__item-meta"
@@ -499,34 +499,35 @@ exports[`PostsListTemplate renders correctly 1`] = `
               <span
                 className="feed__item-meta-readtime"
               >
+                3
                  minute
-                
+                s
                  read
               </span>
             </div>
             <h2
               className="feed__item-title"
             >
-              test_0
+              test 1
             </h2>
             <p
               className="feed__item-description"
             >
-              test_0
+              test 1
             </p>
           </a>
           <a
             className="feed__item"
-            href="/test_1"
+            href="test-2"
           >
             <div
               className="feed__item-meta"
             >
               <time
                 className="feed__item-meta-time"
-                dateTime="September 1, 2016"
+                dateTime="September 2, 2016"
               >
-                September 1, 2016
+                September 2, 2016
               </time>
               <span
                 className="feed__item-meta-divider"
@@ -534,20 +535,21 @@ exports[`PostsListTemplate renders correctly 1`] = `
               <span
                 className="feed__item-meta-readtime"
               >
+                32
                  minute
-                
+                s
                  read
               </span>
             </div>
             <h2
               className="feed__item-title"
             >
-              test_1
+              test 2
             </h2>
             <p
               className="feed__item-description"
             >
-              test_1
+              test 2
             </p>
           </a>
         </div>
