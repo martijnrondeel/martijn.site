@@ -1,37 +1,33 @@
 module.exports = {
   allMarkdownRemark: {
-    group: [
-      {
-        fieldValue: 'test_0',
-        totalCount: 1,
-      },
-      {
-        fieldValue: 'test_1',
-        totalCount: 2,
-      },
-    ],
     edges: [
       {
         node: {
+          id: 'test-1',
+          html: '<p>test</p>',
+          timeToRead: 3,
           fields: {
-            slug: '/test_0',
+            slug: 'test-1',
           },
           frontmatter: {
             date: '2016-09-01',
-            description: 'test_0',
-            title: 'test_0',
+            description: 'test 1',
+            title: 'test 1',
           },
         },
       },
       {
         node: {
+          id: 'test-2',
+          html: '<p>test</p>',
+          timeToRead: 32,
           fields: {
-            slug: '/test_1',
+            slug: 'test-2',
           },
           frontmatter: {
-            date: '2016-09-01',
-            description: 'test_1',
-            title: 'test_1',
+            date: '2016-09-02',
+            description: 'test 2',
+            title: 'test 2',
           },
         },
       },

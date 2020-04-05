@@ -109,6 +109,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="mailto:#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -131,6 +132,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="https://www.facebook.com/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -153,6 +155,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="https://t.me/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -175,6 +178,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="https://twitter.com/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -197,6 +201,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="https://github.com/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -219,6 +224,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -241,6 +247,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="https://vk.com/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -263,6 +270,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="https://www.linkedin.com/in/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -285,6 +293,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="https://www.instagram.com/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -307,6 +316,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="line://ti/p/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -329,6 +339,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="https://www.gitlab.com/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -351,6 +362,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="https://www.weibo.com/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -373,6 +385,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="https://www.codepen.io/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -395,6 +408,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="https://www.youtube.com/channel/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -417,6 +431,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
             <a
               className="contacts__list-item-link"
               href="https://soundcloud.com/#"
+              onClick={[Function]}
               rel="noopener noreferrer"
               target="_blank"
             >
@@ -442,6 +457,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
          
         <a
           href="github.com"
+          onClick={[Function]}
           rel="noopener noreferrer"
           target="_blank"
         >
@@ -466,7 +482,7 @@ exports[`PostsListTemplate renders correctly 1`] = `
         >
           <a
             className="feed__item"
-            href="/test_0"
+            href="test-1"
           >
             <div
               className="feed__item-meta"
@@ -483,34 +499,35 @@ exports[`PostsListTemplate renders correctly 1`] = `
               <span
                 className="feed__item-meta-readtime"
               >
+                3
                  minute
-                
+                s
                  read
               </span>
             </div>
             <h2
               className="feed__item-title"
             >
-              test_0
+              test 1
             </h2>
             <p
               className="feed__item-description"
             >
-              test_0
+              test 1
             </p>
           </a>
           <a
             className="feed__item"
-            href="/test_1"
+            href="test-2"
           >
             <div
               className="feed__item-meta"
             >
               <time
                 className="feed__item-meta-time"
-                dateTime="September 1, 2016"
+                dateTime="September 2, 2016"
               >
-                September 1, 2016
+                September 2, 2016
               </time>
               <span
                 className="feed__item-meta-divider"
@@ -518,20 +535,21 @@ exports[`PostsListTemplate renders correctly 1`] = `
               <span
                 className="feed__item-meta-readtime"
               >
+                32
                  minute
-                
+                s
                  read
               </span>
             </div>
             <h2
               className="feed__item-title"
             >
-              test_1
+              test 2
             </h2>
             <p
               className="feed__item-description"
             >
-              test_1
+              test 2
             </p>
           </a>
         </div>

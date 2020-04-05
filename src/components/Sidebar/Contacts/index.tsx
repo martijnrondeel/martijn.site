@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { getContactHref } from '../../../utils/get-contact-href';
 import styles from './Contacts.module.scss';
 import { Icon } from '../../Icon';
@@ -16,13 +17,13 @@ export const Contacts = ({ contacts }: Props) => (
       {Object.keys(contacts).map((name) =>
         !contacts[name] ? null : (
           <li className={styles['contacts__list-item']} key={name}>
-            <a
+            <OutboundLink
               className={styles['contacts__list-item-link']}
               href={getContactHref(name, contacts[name])}
               rel='noopener noreferrer'
               target='_blank'>
               <Icon icon={getIcon(name)} name={name} />
-            </a>
+            </OutboundLink>
           </li>
         ),
       )}

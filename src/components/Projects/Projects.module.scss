@@ -3,22 +3,28 @@
 
 .projects {
   &__item {
-    @include margin-bottom(1.25);
+    @include padding(.75, 0);
+
+    display: block;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: $color-gray-border;
 
     &:last-child {
       @include margin-bottom(.5);
+      border-bottom: none;
     }
 
     &-title {
-      font-size: $typographic-base-font-size * 1.6875;
+      font-size: $typographic-base-font-size * 1.375;
+      display: inline-block;
       @include line-height(1.5);
-      @include margin-top(0);
+      @include margin-top(.25);
       @include margin-bottom(.5);
 
       &-link {
         color: $color-base;
 
-        &:hover,
         &:focus {
           color: $color-base;
           border-bottom: 1px solid $color-base;
@@ -36,39 +42,65 @@
 
     &-meta {
       font-size: $typographic-small-font-size;
-      color: $color-base;
-      font-weight: 600;
-      text-transform: uppercase;
+      color: $color-gray;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
 
       &-stars {
-        border: 1px solid black;
-        border-radius: 4px;
-        padding: 2px 4px;
+        display: inline-block;
+
+        &-icon {
+          padding: 2px 4px;
+          font-weight: bold;
+        }
       }
 
       &-archived {
-        border: 1px solid black;
         border-radius: 4px;
         padding: 2px 4px;
-        margin-left: 5px;
-        background-color: #a8eaff;
+        margin-left: 8px;
+        font-size: 14px;
+        border: solid 1px #ebebeb;
       }
 
-      &-divider {
-        margin: 0 5px;
-      }
-    }
-
-    &-readmore {
-      font-size: $typographic-base-font-size;
-      color: $color-primary;
-
-      &:hover,
-      &:focus {
-        color: $color-primary;
-        border-bottom: 1px solid $color-primary;
+      // TODO: split to separate component
+      &-topics {
+        margin: 4px 0px;
       }
 
+      &-topic {
+        border-radius: 4px;
+        padding: 2px 4px;
+        margin-right: 4px;
+        background-color: $color-gray-border;
+        color: $typographic-base-font-color;
+      }
+
+      // TODO: split to separate component
+      &-languages {
+        margin-top: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &-language {
+        padding: 2px 4px;
+        margin-right: 4px;
+        display: inline-flex;
+        align-items: center;
+
+        &-name {}
+
+        &-color {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          margin-right: 4px;
+        }
+      }
     }
 
   }
