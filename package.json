@@ -49,7 +49,7 @@
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-remark-smartypants": "^2.2.1",
     "gatsby-source-filesystem": "^2.2.2",
-    "gatsby-source-github-api": "^0.2.0",
+    "gatsby-source-github-api": "^0.2.1",
     "gatsby-transformer-remark": "^2.7.1",
     "gatsby-transformer-sharp": "^2.4.4",
     "lost": "^8.3.1",
