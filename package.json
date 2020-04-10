@@ -29,7 +29,7 @@
     "classnames": "^2.2.6",
     "date-fns": "^2.12.0",
     "dotenv": "^8.2.0",
-    "gatsby": "^2.20.15",
+    "gatsby": "^2.20.16",
     "gatsby-link": "^2.3.2",
     "gatsby-plugin-catch-links": "^2.2.1",
     "gatsby-plugin-google-gtag": "^2.0.0",
