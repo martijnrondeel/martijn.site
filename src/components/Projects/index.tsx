@@ -32,11 +32,9 @@ export const Projects = ({ edges, repositories }: Props) => (
             {matchedRepository && matchedRepository.repositoryTopics.nodes.length > 0 ? (
               <div className={styles['projects__item-meta-topics']}>
                 {matchedRepository.repositoryTopics.nodes.map((r) => (
-                  <span
-                    className={styles['projects__item-meta-topic']}
-                    key={r.topic.name}>
+                  <div className={styles['projects__item-meta-topic']} key={r.topic.name}>
                     {r.topic.name}
-                  </span>
+                  </div>
                 ))}
               </div>
             ) : null}
