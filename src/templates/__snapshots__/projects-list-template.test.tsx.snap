@@ -503,41 +503,41 @@ exports[`ProjectsListTemplate renders correctly 1`] = `
               <div
                 className="projects__item-meta-topics"
               >
-                <span
+                <div
                   className="projects__item-meta-topic"
                 >
                   personal-website
-                </span>
-                <span
+                </div>
+                <div
                   className="projects__item-meta-topic"
                 >
                   gatsby
-                </span>
-                <span
+                </div>
+                <div
                   className="projects__item-meta-topic"
                 >
                   react
-                </span>
-                <span
+                </div>
+                <div
                   className="projects__item-meta-topic"
                 >
                   nodejs
-                </span>
-                <span
+                </div>
+                <div
                   className="projects__item-meta-topic"
                 >
                   typescript
-                </span>
-                <span
+                </div>
+                <div
                   className="projects__item-meta-topic"
                 >
                   github-actions
-                </span>
-                <span
+                </div>
+                <div
                   className="projects__item-meta-topic"
                 >
                   graphql
-                </span>
+                </div>
               </div>
               <div
                 className="projects__item-meta-languages"
