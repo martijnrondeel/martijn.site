@@ -66,13 +66,16 @@
 
       // TODO: split to separate component
       &-topics {
+        display: flex;
+        flex-wrap: wrap;
         margin: 4px 0px;
       }
 
       &-topic {
         border-radius: 4px;
-        padding: 2px 4px;
-        margin-right: 4px;
+        padding: 0rem 0.5rem;
+        margin-bottom: 0.25rem;
+        margin-right: 0.25rem;
         background-color: $color-gray-border;
         color: $typographic-base-font-color;
       }
