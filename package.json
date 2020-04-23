@@ -53,7 +53,7 @@
     "gatsby-transformer-remark": "^2.7.4",
     "gatsby-transformer-sharp": "^2.4.6",
     "lost": "^8.3.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.0",
     "normalize-scss": "^7.0.1",
     "postcss-pxtorem": "^5.1.1",
     "prismjs": "^1.20.0",
