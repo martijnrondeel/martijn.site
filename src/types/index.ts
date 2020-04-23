@@ -21,9 +21,10 @@ export type Post = {
     description?: string;
     title: string;
     socialImage?: string;
-    template?: string;
+    template?: 'project' | 'post' | 'tweet';
     slug?: string;
     project?: string;
+    tweet?: string;
   };
   timeToRead: number;
   html: string;
