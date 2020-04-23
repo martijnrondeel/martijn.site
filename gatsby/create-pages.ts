@@ -30,7 +30,9 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
   // Get posts and projects from markdown
   const result = await graphql<AllMarkdownRemark>(`
     {
-      allMarkdownRemark(filter: { frontmatter: { draft: { ne: true } } }) {
+      allMarkdownRemark(
+        filter: { frontmatter: { draft: { ne: true }, project: { eq: null } } }
+      ) {
         edges {
           node {
             frontmatter {
