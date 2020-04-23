@@ -26,6 +26,8 @@ const ProjectsListTemplate = ({ data }: Props) => {
   );
 };
 
+// TODO:
+// Template: Split tweets from project
 export const query = graphql`
   query {
     allMarkdownRemark(

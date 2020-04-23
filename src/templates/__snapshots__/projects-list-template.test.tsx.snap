@@ -626,6 +626,27 @@ exports[`ProjectsListTemplate renders correctly 1`] = `
               className="projects__item-meta"
             />
           </a>
+          <a
+            className="projects__item"
+            href="https://twitter.com/martijnrondeel/status/1084478682515808257"
+            onClick={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <h2
+              className="projects__item-title"
+            >
+              test 3
+            </h2>
+            <p
+              className="projects__item-description"
+            >
+              test 3
+            </p>
+            <div
+              className="projects__item-meta"
+            />
+          </a>
         </div>
       </div>
     </div>
