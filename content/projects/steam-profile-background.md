@@ -1,12 +1,9 @@
 ---
 title: Steam Profile Background
 project: Steam-Profile-Background
-date: "2020-03-10T22:40:32.169Z"
+date: "2020-03-05"
 template: "project"
 draft: false
 slug: "steam-profile-background"
-description: "This personal website."
-socialImage: "/media/airplane.jpg"
+description: "Public API to get the background of any public Steam profile."
 ---
-
-![airplane.jpg](/media/airplane.jpg)

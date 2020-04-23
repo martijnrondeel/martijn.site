@@ -10,6 +10,7 @@ module.exports = {
       date: '2016-09-01',
       description: 'test',
       title: 'test',
+      template: 'post',
     },
   },
 };

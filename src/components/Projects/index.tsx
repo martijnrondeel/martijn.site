@@ -82,6 +82,20 @@ export const Projects = ({ edges, repositories }: Props) => (
           </OutboundLink>
         );
       }
+
+      if (edge.node.frontmatter.tweet) {
+        return (
+          <OutboundLink
+            className={styles.projects__item}
+            href={edge.node.frontmatter.tweet}
+            key={edge.node.frontmatter.tweet}
+            rel='noopener noreferrer'
+            target='_blank'>
+            {content}
+          </OutboundLink>
+        );
+      }
+
       return (
         <Link
           className={styles.projects__item}

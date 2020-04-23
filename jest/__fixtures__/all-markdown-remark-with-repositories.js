@@ -14,6 +14,7 @@ module.exports = {
             description: 'test 1',
             title: 'test 1',
             project: 'martijn.site',
+            template: 'project',
           },
         },
       },
@@ -29,6 +30,24 @@ module.exports = {
             date: '2016-09-02',
             description: 'test 2',
             title: 'test 2',
+            template: 'post',
+          },
+        },
+      },
+      {
+        node: {
+          id: 'test-3',
+          html: '<p>test</p>',
+          timeToRead: 3,
+          fields: {
+            slug: 'test-3',
+          },
+          frontmatter: {
+            date: '2018-09-01',
+            description: 'test 3',
+            title: 'test 3',
+            tweet: 'https://twitter.com/martijnrondeel/status/1084478682515808257',
+            template: 'tweet',
           },
         },
       },

@@ -1,11 +1,9 @@
 ---
 title: e-paper display
-date: "2020-03-10T22:40:32.169Z"
-template: "project"
+date: "2020-03-04"
+template: "tweet"
+tweet: "https://twitter.com/martijnrondeel/status/1084478682515808257"
 draft: false
 slug: "e-paper-display"
-description: "This personal website."
-socialImage: "/media/airplane.jpg"
+description: "E-paper photo display showing interesting images sourced from the internet."
 ---
-
-![airplane.jpg](/media/airplane.jpg)

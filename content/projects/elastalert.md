@@ -1,12 +1,9 @@
 ---
 title: ElastAlert
 project: elastalert
-date: "2020-03-10T22:40:32.169Z"
+date: "2020-03-09"
 template: "project"
 draft: false
 slug: "elastalert"
-description: "This personal website."
-socialImage: "/media/airplane.jpg"
+description: "Fork of ElastAlert that exposes REST API's for manipulating rules and alerts."
 ---
-
-![airplane.jpg](/media/airplane.jpg)

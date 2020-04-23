@@ -26,10 +26,14 @@ const ProjectsListTemplate = ({ data }: Props) => {
   );
 };
 
+// TODO:
+// Template: Split tweets from project
 export const query = graphql`
   query {
     allMarkdownRemark(
-      filter: { frontmatter: { template: { eq: "project" }, draft: { ne: true } } }
+      filter: {
+        frontmatter: { template: { in: ["project", "tweet"] }, draft: { ne: true } }
+      }
       sort: { order: DESC, fields: [frontmatter___date] }
     ) {
       edges {
@@ -42,6 +46,7 @@ export const query = graphql`
             date
             description
             project
+            tweet
           }
         }
       }

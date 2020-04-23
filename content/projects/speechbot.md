@@ -1,12 +1,9 @@
 ---
 title: SpeechBot
 project: SpeechBot
-date: "2020-03-10T22:40:32.169Z"
+date: "2020-03-06"
 template: "project"
 draft: false
 slug: "speechbot"
-description: "This personal website."
-socialImage: "/media/airplane.jpg"
+description: "A Text-to-Speech Telegram bot."
 ---
-
-![airplane.jpg](/media/airplane.jpg)

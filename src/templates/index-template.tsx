@@ -20,8 +20,8 @@ const IndexTemplate = () => {
         </h1>
         <p>
           My name is Martijn and I’m a software engineer living in The Netherlands. I’m
-          focused on turning ideas into engaging, pragmatic software, doing my best work
-          when collaborating closely with stakeholders, designers and developers.
+          focused on turning ideas into engaging, pragmatic software, creating my best
+          work when collaborating closely with stakeholders, designers and developers.
         </p>
         <p>
           In my free time, I enjoy bouldering, photography, playing the piano and
