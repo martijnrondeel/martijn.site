@@ -5,9 +5,10 @@ import { useSiteMetadata } from '../../../hooks/use-site-metadata';
 type Props = {
   postTitle: string;
   postSlug: string;
+  postId: string;
 };
 
-export const Comments = ({ postTitle, postSlug }: Props) => {
+export const Comments = ({ postTitle, postSlug, postId }: Props) => {
   const { url, disqusShortname } = useSiteMetadata();
 
   if (!disqusShortname) {
@@ -16,7 +17,7 @@ export const Comments = ({ postTitle, postSlug }: Props) => {
 
   return (
     <ReactDisqusComments
-      identifier={postTitle}
+      identifier={postId}
       shortname={disqusShortname}
       title={postTitle}
       url={`${url}${postSlug}`}

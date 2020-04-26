@@ -2,6 +2,8 @@
 @import '../../../assets/scss/mixins';
 
 .meta {
+  border-top: 1px solid $color-gray-border;
+
   &__date {
     font-style: italic;
   }

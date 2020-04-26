@@ -7,7 +7,7 @@ export const siteConfig = {
   subtitle: 'Software engineer with an interest in the web, creative coding & more.',
   copyright: '',
   repo: repository,
-  disqusShortname: '',
+  disqusShortname: 'martijn-site',
   postsPerPage: 4,
   googleAnalyticsId: 'UA-22014814-11',
   useKatex: false,

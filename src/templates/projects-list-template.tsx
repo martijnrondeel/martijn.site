@@ -17,7 +17,7 @@ const ProjectsListTemplate = ({ data }: Props) => {
   const repositories = data.githubData.data.user.topRepositories.nodes;
 
   return (
-    <Layout description={siteSubtitle} title={siteTitle}>
+    <Layout description={siteSubtitle} title={`Projects - ${siteTitle}`}>
       <Sidebar isIndex />
       <Page>
         <Projects edges={edges} repositories={repositories} />

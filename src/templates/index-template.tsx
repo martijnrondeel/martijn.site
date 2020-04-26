@@ -6,14 +6,14 @@ import { useSiteMetadata } from '../hooks/use-site-metadata';
 import styles from './index-template.module.scss';
 
 const IndexTemplate = () => {
-  const { subtitle: siteSubtitle } = useSiteMetadata();
+  const { subtitle: siteSubtitle, title: siteTitle } = useSiteMetadata();
 
   return (
-    <Layout description={siteSubtitle} title={'Martijn Rondeel'}>
+    <Layout description={siteSubtitle} title={siteTitle}>
       <Sidebar isIndex />
       <Page>
         <h1>
-          <span aria-label='hello sign' className={styles.wave} role='img'>
+          <span aria-label='hello' className={styles.wave} role='img'>
             👋
           </span>{' '}
           Hello!

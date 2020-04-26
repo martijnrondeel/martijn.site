@@ -4,12 +4,6 @@ exports[`Post renders correctly 1`] = `
 <div
   className="post"
 >
-  <a
-    className="post__home-button"
-    href="/blog"
-  >
-    All Articles
-  </a>
   <div
     className="post__content"
   >
@@ -44,30 +38,15 @@ exports[`Post renders correctly 1`] = `
         1 Sep 2016
       </p>
     </div>
-    <div
-      className="author"
-    >
-      <p
-        className="author__bio"
-      >
-        Test bio
-        <a
-          className="author__bio-twitter"
-          href="https://twitter.com/#"
-          onClick={[Function]}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          <strong>
-            Test name
-          </strong>
-           on Twitter
-        </a>
-      </p>
-    </div>
   </div>
   <div
     className="post__comments"
-  />
+  >
+    <div>
+      <div
+        id="disqus_thread"
+      />
+    </div>
+  </div>
 </div>
 `;
