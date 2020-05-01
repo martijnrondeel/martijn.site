@@ -22,8 +22,5 @@
   ],
   "labels": ["renovate"],
   "prHourlyLimit": 4,
-  "prConcurrentLimit": 16,
-  "rangeStrategy": "bump",
-  "semanticCommits": true,
   "baseBranches": ["develop"]
 }
