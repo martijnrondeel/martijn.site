@@ -477,13 +477,13 @@ exports[`NotFoundTemplate renders correctly 1`] = `
       <h1
         className="page__title"
       >
-        NOT FOUND
+        Not found
       </h1>
       <div
         className="page__body"
       >
         <p>
-          You just hit a route that doesn't exist... the sadness.
+          You just hit a route that doesn't exist.
         </p>
       </div>
     </div>

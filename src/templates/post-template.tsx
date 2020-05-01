@@ -4,6 +4,8 @@ import { Layout } from '../components/Layout';
 import { Post } from '../components/Post';
 import { Post as PostType } from '../types';
 import { useSiteMetadata } from '../hooks/use-site-metadata';
+import { Sidebar } from '../components/Sidebar';
+import { Page } from '../components/Page';
 
 type Props = {
   data: {
@@ -22,7 +24,10 @@ const PostTemplate = ({ data }: Props) => {
       description={metaDescription}
       socialImage={socialImage}
       title={`${postTitle} - ${siteTitle}`}>
-      <Post post={data.markdownRemark} />
+      <Sidebar />
+      <Page>
+        <Post post={data.markdownRemark} />
+      </Page>
     </Layout>
   );
 };

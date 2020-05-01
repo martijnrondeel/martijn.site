@@ -479,7 +479,7 @@ exports[`IndexTemplate renders correctly 1`] = `
       >
         <h1>
           <span
-            aria-label="hello sign"
+            aria-label="hello"
             className="wave"
             role="img"
           >

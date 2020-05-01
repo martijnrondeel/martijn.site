@@ -26,7 +26,7 @@ const PostsListTemplate = ({ data, pageContext }: Props) => {
 
   const { edges } = data.allMarkdownRemark;
   const pageTitle =
-    currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
+    currentPage > 0 ? `Blog - Page ${currentPage} - ${siteTitle}` : `Blog - ${siteTitle}`;
 
   return (
     <Layout description={siteSubtitle} title={pageTitle}>
