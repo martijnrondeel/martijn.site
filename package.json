@@ -89,8 +89,8 @@
     "eslint-plugin-react-hooks": "^3.0.0",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^25.5.3",
-    "jest-cli": "^25.5.3",
+    "jest": "^25.5.4",
+    "jest-cli": "^25.5.4",
     "prettier": "^2.0.5",
     "react-test-renderer": "^16.13.1",
     "typescript": "^3.8.3"
