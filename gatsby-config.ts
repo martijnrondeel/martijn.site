@@ -176,7 +176,6 @@ export default {
         },
       },
     },
-    'gatsby-plugin-typescript',
     'gatsby-plugin-optimize-svgs',
   ],
 };
