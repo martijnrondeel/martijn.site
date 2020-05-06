@@ -27,7 +27,7 @@
     "@types/autoprefixer": "^9.7.2",
     "autoprefixer": "^9.7.6",
     "classnames": "^2.2.6",
-    "date-fns": "^2.12.0",
+    "date-fns": "^2.13.0",
     "dotenv": "^8.2.0",
     "gatsby": "^2.21.16",
     "gatsby-link": "^2.4.1",
