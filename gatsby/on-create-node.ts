@@ -5,7 +5,7 @@ import { Post } from '../src/types';
 export const onCreateNode: GatsbyNode['onCreateNode'] = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  const nodeCopy = node as Post;
+  const nodeCopy = (node as unknown) as Post;
 
   if (node.internal.type === 'MarkdownRemark') {
     if (typeof nodeCopy.frontmatter.slug !== 'undefined') {
