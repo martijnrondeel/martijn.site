@@ -5,9 +5,8 @@
   "description": "Personal website of Martijn Rondeel",
   "main": "n/a",
   "scripts": {
-    "develop": "yarn run clean && gatsby develop",
-    "build": "yarn run clean && gatsby build",
-    "clean": "rm -rf .cache public",
+    "develop": "gatsby develop",
+    "build": "gatsby build --log-pages",
     "lint": "eslint --ext .ts,.tsx .",
     "test": "jest --config ./jest/jest.config.js",
     "test:coverage": "jest --coverage --config ./jest/jest.config.js",
