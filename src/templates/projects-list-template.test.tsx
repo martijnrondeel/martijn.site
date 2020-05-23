@@ -7,7 +7,7 @@ import allMarkdownRemarkWithRepositories from '../../jest/__fixtures__/all-markd
 import pageContext from '../../jest/__fixtures__/page-context';
 import { RenderCallback } from '../types';
 
-describe('ProjectsListTemplate', () => {
+describe('projectsListTemplate', () => {
   const props = {
     data: {
       ...allMarkdownRemarkWithRepositories,

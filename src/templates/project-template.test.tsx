@@ -6,7 +6,7 @@ import siteMetadata from '../../jest/__fixtures__/site-metadata';
 import markdownRemark from '../../jest/__fixtures__/markdown-remark';
 import { RenderCallback } from '../types';
 
-describe('ProjectTemplate', () => {
+describe('projectTemplate', () => {
   const props = {
     data: {
       ...markdownRemark,

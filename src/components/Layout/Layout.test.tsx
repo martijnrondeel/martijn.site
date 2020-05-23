@@ -5,7 +5,7 @@ import siteMetadata from '../../../jest/__fixtures__/site-metadata';
 import { Layout } from '.';
 import { RenderCallback } from '../../types';
 
-describe('Layout', () => {
+describe('layout', () => {
   const props = {
     ...siteMetadata,
     children: 'test',

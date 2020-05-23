@@ -6,7 +6,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const Page = ({ title, children }: Props) => {
+export const Page = ({ title, children }: Props): JSX.Element => {
   const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

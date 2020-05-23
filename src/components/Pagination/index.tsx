@@ -18,7 +18,7 @@ export const Pagination = ({
   nextPagePath,
   hasNextPage,
   hasPrevPage,
-}: Props) => {
+}: Props): JSX.Element => {
   const prevClassName = cx({
     'pagination__prev-link': true,
     'pagination__prev-link--disable': !hasPrevPage,

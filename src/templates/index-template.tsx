@@ -5,7 +5,7 @@ import { Page } from '../components/Page';
 import { useSiteMetadata } from '../hooks/use-site-metadata';
 import styles from './index-template.module.scss';
 
-const IndexTemplate = () => {
+const IndexTemplate = (): JSX.Element => {
   const { subtitle: siteSubtitle, title: siteTitle } = useSiteMetadata();
 
   return (
@@ -35,4 +35,6 @@ const IndexTemplate = () => {
   );
 };
 
+// Currently gatsby requires a 'export default' to exist in the file
+// eslint-disable-next-line import/no-default-export
 export default IndexTemplate;

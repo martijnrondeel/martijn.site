@@ -7,7 +7,7 @@ import allMarkdownRemark from '../../jest/__fixtures__/all-markdown-remark';
 import pageContext from '../../jest/__fixtures__/page-context';
 import { RenderCallback } from '../types';
 
-describe('PostsListTemplate', () => {
+describe('postsListTemplate', () => {
   const props = {
     data: {
       ...allMarkdownRemark,

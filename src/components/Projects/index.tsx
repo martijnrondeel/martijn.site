@@ -9,7 +9,7 @@ type Props = {
   repositories: Repository[];
 };
 
-export const Projects = ({ edges, repositories }: Props) => (
+export const Projects = ({ edges, repositories }: Props): JSX.Element => (
   <div className={styles.projects}>
     {edges.map((edge) => {
       const matchedRepository = repositories.find(

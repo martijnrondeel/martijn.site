@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Page } from '.';
 
-describe('Page', () => {
+describe('page', () => {
   const props = {
     children: 'test',
     title: 'test',

@@ -26,8 +26,11 @@ export const createPostsPages: GatsbyNode['createPages'] = async ({
     throw new Error('ERROR: Could not fetch posts on build');
   }
 
+  const { allMarkdownRemark } = result.data as {
+    allMarkdownRemark: { totalCount: number };
+  };
   const { postsPerPage } = siteConfig;
-  const numPages = Math.ceil(result.data.allMarkdownRemark.totalCount / postsPerPage);
+  const numPages = Math.ceil(allMarkdownRemark.totalCount / postsPerPage);
 
   for (let i = 0; i < numPages; i += 1) {
     createPage({

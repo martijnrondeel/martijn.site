@@ -5,7 +5,7 @@ import { Sidebar } from '.';
 import siteMetadata from '../../../jest/__fixtures__/site-metadata';
 import { RenderCallback } from '../../types';
 
-describe('Sidebar', () => {
+describe('sidebar', () => {
   beforeEach(() => {
     StaticQuery.mockImplementationOnce(
       ({ render }: RenderCallback) => render(siteMetadata),

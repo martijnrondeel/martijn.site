@@ -11,13 +11,13 @@ type Props = {
   data: AllMarkdownRemarkWithRepositories;
 };
 
-const ProjectsListTemplate = ({ data }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
+const ProjectsListTemplate = ({ data }: Props): JSX.Element => {
+  const { title, subtitle } = useSiteMetadata();
   const { edges } = data.allMarkdownRemark;
   const repositories = data.githubData.data.user.topRepositories.nodes;
 
   return (
-    <Layout description={siteSubtitle} title={`Projects - ${siteTitle}`}>
+    <Layout description={subtitle} title={`Projects - ${title}`}>
       <Sidebar isIndex />
       <Page>
         <Projects edges={edges} repositories={repositories} />
@@ -85,4 +85,6 @@ export const query = graphql`
   }
 `;
 
+// Currently gatsby requires a 'export default' to exist in the file
+// eslint-disable-next-line import/no-default-export
 export default ProjectsListTemplate;

@@ -6,7 +6,7 @@ import markdownRemark from '../../jest/__fixtures__/markdown-remark';
 import { RenderCallback } from '../types';
 import PostTemplate from './post-template';
 
-describe('PostTemplate', () => {
+describe('postTemplate', () => {
   const props = {
     data: {
       ...markdownRemark,

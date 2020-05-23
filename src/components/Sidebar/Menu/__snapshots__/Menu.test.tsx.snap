@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Menu renders correctly 1`] = `
+exports[`menu renders correctly 1`] = `
 <nav
   className="menu"
 >
