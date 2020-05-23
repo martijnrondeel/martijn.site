@@ -21,6 +21,7 @@
     }
   ],
   "labels": ["renovate"],
-  "prHourlyLimit": 4,
-  "baseBranches": ["develop"]
+  "baseBranches": ["develop"],
+  "lockFileMaintenance": { "enabled": true },
+  "rangeStrategy": "replace"
 }
