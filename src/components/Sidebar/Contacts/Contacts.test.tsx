@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Contacts } from '.';
 
-describe('Contacts', () => {
+describe('contacts', () => {
   const props = {
     contacts: {
       email: '#',

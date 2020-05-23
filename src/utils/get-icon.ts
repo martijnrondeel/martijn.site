@@ -1,7 +1,8 @@
 import { ICONS } from '../constants';
+import { Icon } from '../types';
 
-export const getIcon = (name: string) => {
-  let icon;
+export const getIcon = (name: string): Icon => {
+  let icon: Icon;
 
   switch (name) {
     case 'twitter':

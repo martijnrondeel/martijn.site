@@ -8,7 +8,7 @@ type Props = {
   postId: string;
 };
 
-export const Comments = ({ postTitle, postSlug, postId }: Props) => {
+export const Comments = ({ postTitle, postSlug, postId }: Props): JSX.Element => {
   const { url, disqusShortname } = useSiteMetadata();
 
   if (!disqusShortname) {

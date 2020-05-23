@@ -13,7 +13,7 @@ type Props = {
   pageContext: PageContext;
 };
 
-const PostsListTemplate = ({ data, pageContext }: Props) => {
+const PostsListTemplate = ({ data, pageContext }: Props): JSX.Element => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
 
   const {
@@ -69,4 +69,6 @@ export const query = graphql`
   }
 `;
 
+// Currently gatsby requires a 'export default' to exist in the file
+// eslint-disable-next-line import/no-default-export
 export default PostsListTemplate;

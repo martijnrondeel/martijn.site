@@ -3,8 +3,9 @@ import { GatsbyNode } from 'gatsby';
 import { createPostsPages } from './pagination/create-posts-pages';
 import { AllMarkdownRemark } from '../src/types';
 
-export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+export const createPages: GatsbyNode['createPages'] = async (args) => {
+  const { createPage } = args.actions;
+  const { graphql } = args;
 
   // 404
   createPage({
@@ -78,6 +79,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions 
   });
 
   // Creates feeds for the above pages
-  // @ts-ignore
-  createPostsPages({ graphql, actions });
+  if (createPostsPages) {
+    createPostsPages(args);
+  }
 };

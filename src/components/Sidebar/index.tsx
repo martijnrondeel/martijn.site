@@ -10,7 +10,7 @@ type Props = {
   isIndex?: boolean;
 };
 
-export const Sidebar = ({ isIndex }: Props) => {
+export const Sidebar = ({ isIndex }: Props): JSX.Element => {
   const { author, copyright, repo, menu } = useSiteMetadata();
 
   return (

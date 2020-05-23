@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Menu } from '.';
 
-describe('Menu', () => {
+describe('menu', () => {
   const props = {
     menu: [
       {

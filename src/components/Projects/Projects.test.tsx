@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Projects } from '.';
 
-describe('Projects', () => {
+describe('projects', () => {
   const props = {
     edges: [
       {

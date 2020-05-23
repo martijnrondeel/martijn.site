@@ -8,6 +8,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      CI: true
+
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -25,7 +28,7 @@ jobs:
       id: yarn-cache-dir-path
       run: echo "::set-output name=dir::$(yarn cache dir)"
 
-    - name: Set yarn cache
+    - name: Cache Yarn cache
       uses: actions/cache@v1
       id: yarn-cache
       with:
@@ -41,7 +44,6 @@ jobs:
       run: yarn build
       env:
         GITHUB_API_TOKEN: ${{ secrets.GITHUB_API_TOKEN }}
-        CI: true
 
     - name: Percy visual test
       uses: percy/snapshot-action@v0.1.1
@@ -54,6 +56,9 @@ jobs:
     name: Test
 
     runs-on: ubuntu-latest
+
+    env:
+      CI: true
 
     steps:
     - name: Checkout
@@ -92,6 +97,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      CI: true
+
     steps:
     - name: Checkout
       uses: actions/checkout@v2
@@ -128,6 +136,9 @@ jobs:
     name: Coverage
 
     runs-on: ubuntu-latest
+
+    env:
+      CI: true
 
     steps:
     - name: Checkout

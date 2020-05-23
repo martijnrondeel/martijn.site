@@ -1,6 +1,7 @@
 import { config } from 'dotenv';
 import { siteConfig } from './config';
 import { postCssPlugins } from './postcss-config';
+import { Edges } from './src/types';
 
 // Load .env environment variables into process.env
 config();
@@ -144,8 +145,14 @@ export default {
           }
         `,
         output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }: any) =>
-          allSitePage.edges.map((edge: any) => ({
+        serialize: ({
+          site,
+          allSitePage,
+        }: {
+          site: { siteMetadata: { siteUrl: string } };
+          allSitePage: { edges: Edges };
+        }) =>
+          allSitePage.edges.map((edge) => ({
             url: `${site.siteMetadata.siteUrl}${edge.node.path}`,
             changefreq: 'daily',
             priority: 0.7,
@@ -170,13 +177,13 @@ export default {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         postCssPlugins: [...postCssPlugins],
         cssLoaderOptions: {
           camelCase: false,
         },
       },
     },
-    'gatsby-plugin-typescript',
     'gatsby-plugin-optimize-svgs',
   ],
 };

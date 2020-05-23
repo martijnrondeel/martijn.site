@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Icon } from '.';
 
-describe('Icon', () => {
+describe('icon', () => {
   const props = {
     name: 'test',
     icon: {
