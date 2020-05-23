@@ -5,7 +5,7 @@ import NotFoundTemplate from './not-found-template';
 import siteMetadata from '../../jest/__fixtures__/site-metadata';
 import { RenderCallback } from '../types';
 
-describe('NotFoundTemplate', () => {
+describe('notFoundTemplate', () => {
   beforeEach(() => {
     StaticQuery.mockImplementationOnce(
       ({ render }: RenderCallback) => render(siteMetadata),

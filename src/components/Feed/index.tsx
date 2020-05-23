@@ -8,7 +8,7 @@ type Props = {
   edges: Edges;
 };
 
-export const Feed = ({ edges }: Props) => (
+export const Feed = ({ edges }: Props): JSX.Element => (
   <div className={styles.feed}>
     {edges.map((edge) => (
       <Link

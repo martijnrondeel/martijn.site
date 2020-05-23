@@ -9,7 +9,7 @@ type Props = {
   }>;
 };
 
-export const Menu = ({ menu }: Props) => (
+export const Menu = ({ menu }: Props): JSX.Element => (
   <nav className={styles.menu}>
     <ul className={styles.menu__list}>
       {menu.map((item) => (

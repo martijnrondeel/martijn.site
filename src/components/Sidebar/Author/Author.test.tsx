@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Author } from '.';
 
-describe('Author', () => {
+describe('author', () => {
   const props = {
     author: {
       name: 'test',

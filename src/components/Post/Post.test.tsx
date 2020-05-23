@@ -5,7 +5,7 @@ import { Post } from '.';
 import siteMetadata from '../../../jest/__fixtures__/site-metadata';
 import { RenderCallback } from '../../types';
 
-describe('Post', () => {
+describe('post', () => {
   beforeEach(() => {
     StaticQuery.mockImplementationOnce(
       ({ render }: RenderCallback) => render(siteMetadata),

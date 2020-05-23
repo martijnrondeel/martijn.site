@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Meta } from '.';
 
-describe('Meta', () => {
+describe('meta', () => {
   it('renders correctly', () => {
     const props = {
       date: '2016-09-01',

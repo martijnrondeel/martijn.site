@@ -9,7 +9,7 @@ type Props = {
   post: PostType;
 };
 
-export const Post = ({ post }: Props) => {
+export const Post = ({ post }: Props): JSX.Element => {
   const { html, id } = post;
   const { slug } = post.fields;
   const { title, date } = post.frontmatter;

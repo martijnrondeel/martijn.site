@@ -11,7 +11,12 @@ type Props = {
   socialImage?: string;
 };
 
-export const Layout = ({ children, title, description, socialImage }: Props) => {
+export const Layout = ({
+  children,
+  title,
+  description,
+  socialImage,
+}: Props): JSX.Element => {
   const { author, url } = useSiteMetadata();
   const metaImage = socialImage != null ? socialImage : author.photo;
   const metaImageUrl = `${url}${withPrefix(metaImage)}`;

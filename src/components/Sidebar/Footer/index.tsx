@@ -7,7 +7,7 @@ type Props = {
   repo: string;
 };
 
-export const Footer = ({ copyright, repo }: Props) => (
+export const Footer = ({ copyright, repo }: Props): JSX.Element => (
   <div className={styles.footer}>
     Source @{' '}
     <OutboundLink href={repo} rel='noopener noreferrer' target='_blank'>

@@ -11,7 +11,7 @@ type Props = {
   };
 };
 
-export const Contacts = ({ contacts }: Props) => (
+export const Contacts = ({ contacts }: Props): JSX.Element => (
   <div className={styles.contacts}>
     <ul className={styles.contacts__list}>
       {Object.keys(contacts).map((name) =>

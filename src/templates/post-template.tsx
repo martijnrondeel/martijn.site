@@ -13,7 +13,7 @@ type Props = {
   };
 };
 
-const PostTemplate = ({ data }: Props) => {
+const PostTemplate = ({ data }: Props): JSX.Element => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const { frontmatter } = data.markdownRemark;
   const { title: postTitle, description: postDescription, socialImage } = frontmatter;
@@ -50,4 +50,6 @@ export const query = graphql`
   }
 `;
 
+// Currently gatsby requires a 'export default' to exist in the file
+// eslint-disable-next-line import/no-default-export
 export default PostTemplate;

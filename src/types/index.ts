@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 export type RenderCallback = {
-  render: (data: any) => ReactNode;
+  render: (data: unknown) => ReactNode;
 };
 
 export type PageContext = {
@@ -26,6 +26,7 @@ export type Post = {
     project?: string;
     tweet?: string;
   };
+  path: string;
   timeToRead: number;
   html: string;
   id: string;
@@ -75,4 +76,33 @@ export type AllMarkdownRemarkWithRepositories = AllMarkdownRemark & {
       };
     };
   };
+};
+
+export type siteMetaData = {
+  site: {
+    siteMetadata: {
+      url: string;
+      title: string;
+      subtitle: string;
+      copyright: string;
+      repo: string;
+      disqusShortname: string;
+      postsPerPage: number;
+      menu: Array<{
+        label: string;
+        path: string;
+      }>;
+      author: {
+        name: string;
+        photo: string;
+        bio: string;
+        contacts: { [contact: string]: string };
+      };
+    };
+  };
+};
+
+export type Icon = {
+  path: string;
+  viewBox: string;
 };

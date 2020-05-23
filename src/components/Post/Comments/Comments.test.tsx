@@ -5,7 +5,7 @@ import { Comments } from '.';
 import siteMetadata from '../../../../jest/__fixtures__/site-metadata';
 import { RenderCallback } from '../../../types';
 
-describe('Comments', () => {
+describe('comments', () => {
   beforeEach(() => {
     StaticQuery.mockImplementationOnce(
       ({ render }: RenderCallback) => render(siteMetadata),

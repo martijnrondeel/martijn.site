@@ -12,12 +12,12 @@ type Props = {
   };
 };
 
-const ProjectTemplate = ({ data }: Props) => {
+const ProjectTemplate = ({ data }: Props): JSX.Element => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const { html: pageBody } = data.markdownRemark;
   const { frontmatter } = data.markdownRemark;
   const { title: projectTitle, description: pageDescription, socialImage } = frontmatter;
-  const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
+  const metaDescription = pageDescription === null ? siteSubtitle : pageDescription;
 
   return (
     <Layout
@@ -47,4 +47,6 @@ export const query = graphql`
   }
 `;
 
+// Currently gatsby requires a 'export default' to exist in the file
+// eslint-disable-next-line import/no-default-export
 export default ProjectTemplate;

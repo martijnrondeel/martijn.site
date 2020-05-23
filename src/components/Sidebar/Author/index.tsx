@@ -11,7 +11,7 @@ type Props = {
   isIndex?: boolean;
 };
 
-export const Author = ({ author, isIndex }: Props) => (
+export const Author = ({ author, isIndex }: Props): JSX.Element => (
   <div className={styles.author}>
     <Link to='/'>
       <img

@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Pagination } from '.';
 
-describe('Pagination', () => {
+describe('pagination', () => {
   const props = {
     prevPagePath: '/page/1',
     nextPagePath: '/page/3',
