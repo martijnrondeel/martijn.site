@@ -64,6 +64,7 @@ export default {
                   totalCount
                 }
                 isArchived
+                isPrivate
                 pushedAt
                 languages(first: 3, orderBy: {field: SIZE, direction: DESC}) {
                   nodes {

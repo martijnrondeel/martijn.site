@@ -52,6 +52,7 @@ export type Repository = {
       };
     }>;
   };
+  isPrivate: boolean;
   isArchived: boolean;
   pushedAt: string;
 };
