@@ -1,5 +1,5 @@
 import React from 'react';
-import { withPrefix, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import styles from './Author.module.scss';
 
 type Props = {
@@ -18,7 +18,7 @@ export const Author = ({ author, isIndex }: Props): JSX.Element => (
         alt={author.name}
         className={styles.author__photo}
         height='120'
-        src={withPrefix(author.photo)}
+        src={author.photo}
         width='120'
       />
     </Link>
