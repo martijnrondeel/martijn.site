@@ -71,7 +71,7 @@
     "@types/node": "^12.12.42",
     "@types/react": "^16.9.35",
     "@types/react-helmet": "^6.0.0",
-    "@types/react-test-renderer": "^16.9.2",
+    "@types/react-test-renderer": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^3.0.0",
     "@typescript-eslint/parser": "^3.0.0",
     "babel-jest": "^26.0.1",
