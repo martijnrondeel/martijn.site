@@ -20,7 +20,7 @@ jobs:
       id: nvm
 
     - name: Setup Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
@@ -69,7 +69,7 @@ jobs:
       id: nvm
 
     - name: Setup Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
@@ -109,7 +109,7 @@ jobs:
       id: nvm
 
     - name: Setup Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
@@ -149,7 +149,7 @@ jobs:
       id: nvm
 
     - name: Setup Node.js
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
