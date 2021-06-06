@@ -28,7 +28,7 @@
     "autoprefixer": "^9.8.0",
     "classnames": "^2.2.6",
     "date-fns": "^2.14.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "^10.0.0",
     "gatsby": "^2.22.9",
     "gatsby-link": "^2.4.3",
     "gatsby-plugin-catch-links": "^2.3.2",
