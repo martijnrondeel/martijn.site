@@ -90,7 +90,7 @@
     "jest": "^26.0.1",
     "jest-cli": "^26.0.1",
     "prettier": "^2.0.5",
-    "react-test-renderer": "^16.13.1",
+    "react-test-renderer": "^18.0.0",
     "typescript": "^3.9.3"
   }
 }
